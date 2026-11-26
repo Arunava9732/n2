@@ -1,4 +1,5 @@
 # Ignore raw source media dump so GitHub Pages repo stays clean and fast
 Photos-1-001/
+Audio/
 .DS_Store
 Thumbs.db

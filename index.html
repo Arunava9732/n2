@@ -3,19 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
-  <title>❄️❤️ Love GPT — Frosted in Eternal Love</title>
-  <meta name="description" content="A luminous frosted-glass romantic AI sanctuary featuring an on-device Love LLM, realistic 50-page sliding photo book, 4-wing origami 50x explosion box, biometric Love Meter, 10 activities, and 112 memories." />
+  <title>❄️❤️ Arunava • Love GPT — Sanctuary of Love &amp; Snow</title>
+  <meta name="description" content="Arunava's romantic Love & Snow sanctuary featuring dynamic question understanding, progressive image reveal, custom songs, 120 photos, 10 videos, 50 unique scrapbook openings, and 50 unique origami folds." />
   <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/npm/emoji-datasource-apple@15.1.2/img/apple/64/2764-fe0f.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Smooth GPU-Composited Pastel Frost Sky -->
-  <div class="frost-atmosphere" aria-hidden="true"></div>
-
-  <!-- High-Visibility Falling Snowflakes, 3D Hearts & Sparkle Wake Canvas -->
+  <!-- Luminous Snow & Soft Blush Ambient Backdrop -->
+  <div class="snow-love-atmosphere" aria-hidden="true"></div>
   <canvas id="frostSnowCanvas" aria-hidden="true"></canvas>
   <div id="celebrationLayer" aria-hidden="true"></div>
   <div id="toastContainer" class="toast-container" aria-live="polite"></div>
@@ -27,283 +25,258 @@
     <!-- Mobile Sidebar Backdrop -->
     <div id="sidebarBackdrop" class="sidebar-backdrop"></div>
 
-    <!-- ==================== CLEAN FROSTED GLASS SIDEBAR ==================== -->
-    <aside id="sidebar" class="sidebar glass-chrome" aria-label="Sanctuary Navigation">
+    <!-- ==================== FURNISHED MINIMALIST SIDEBAR ==================== -->
+    <aside id="sidebar" class="sidebar" aria-label="Sanctuary Navigation">
       <div class="sidebar-header">
         <div class="brand-lockup">
-          <div id="lottieHeartContainer" class="crystal-brand-orb" title="Love GPT">
+          <div class="crystal-brand-orb" title="Arunava • Love GPT">
             <img class="brand-3d-heart" src="https://cdn.jsdelivr.net/npm/emoji-datasource-apple@15.1.2/img/apple/64/2764-fe0f.png" alt="Heart" />
           </div>
           <div class="brand-text-col">
-            <div class="brand-title">Love GPT <span class="frost-pill">❄️ Frost AI</span></div>
+            <div class="brand-title">Arunava <span class="frost-pill">❄️ Love GPT</span></div>
             <div id="brandSubText" class="brand-sub">Whispered from Arunava's Heart</div>
           </div>
         </div>
-        <button id="sidebarCloseBtn" class="glass-icon-btn mobile-only" type="button" aria-label="Close navigation">✕</button>
+        <button id="sidebarCloseBtn" class="icon-btn mobile-only" type="button" aria-label="Close navigation">✕</button>
       </div>
 
-      <button id="newChatBtn" class="new-chat-btn sheen-hover" type="button">
-        <span>❄️</span>
-        <span>Fresh Conversation</span>
+      <button id="newChatBtn" class="new-chat-btn" type="button">
+        <span>✨</span>
+        <span>New Chat with Arunava</span>
       </button>
 
-      <!-- 8 Sanctuary Spaces -->
       <nav class="sidebar-nav smooth-scroll-pane" aria-label="Sanctuary Spaces">
         <div class="sidebar-label">Sanctuary Spaces</div>
-        <button class="nav-item active sheen-hover" data-view="chat" type="button">
+        <button class="nav-item active" data-view="chat" type="button">
           <span class="nav-icon">💬</span>
-          <span class="nav-label-txt">Ask Love GPT</span>
-          <span class="nav-pill">LLM</span>
+          <span class="nav-label-txt">Chat with Arunava</span>
+          <span class="nav-pill">❤️</span>
         </button>
-        <button class="nav-item sheen-hover" data-view="scrapbook" type="button">
+        <button class="nav-item" data-view="scrapbook" type="button">
           <span class="nav-icon">📖</span>
           <span class="nav-label-txt">50-Page Scrapbook</span>
           <span class="nav-pill">50</span>
         </button>
-        <button class="nav-item sheen-hover" data-view="explosion" type="button">
+        <button class="nav-item" data-view="explosion" type="button">
           <span class="nav-icon">🎁</span>
-          <span class="nav-label-txt">50x Explosion Box</span>
+          <span class="nav-label-txt">50x Origami Box</span>
           <span class="nav-pill">50</span>
         </button>
-        <button class="nav-item sheen-hover" data-view="activities" type="button">
+        <button class="nav-item" data-view="activities" type="button">
           <span class="nav-icon">🎮</span>
           <span class="nav-label-txt">Play Together</span>
           <span class="nav-pill">10</span>
         </button>
-        <button class="nav-item sheen-hover" data-view="gallery" type="button">
+        <button class="nav-item" data-view="gallery" type="button">
           <span class="nav-icon">🎬</span>
           <span class="nav-label-txt">Memories &amp; Videos</span>
-          <span class="nav-pill">112</span>
+          <span class="nav-pill">130</span>
         </button>
-        <button class="nav-item sheen-hover" data-view="favorites" type="button">
+        <button class="nav-item" data-view="favorites" type="button">
           <span class="nav-icon">🇫🇮</span>
           <span class="nav-label-txt">Snow &amp; Loved Things</span>
+          <span class="nav-pill">❄️</span>
         </button>
-        <button class="nav-item sheen-hover" data-view="timeline" type="button">
+        <button class="nav-item" data-view="timeline" type="button">
           <span class="nav-icon">🕰️</span>
           <span class="nav-label-txt">Our Love Timeline</span>
           <span class="nav-pill">6</span>
         </button>
-        <button class="nav-item sheen-hover" data-view="lovelab" type="button">
-          <span class="nav-icon">💘</span>
-          <span class="nav-label-txt">Soulmate Meter &amp; Letter</span>
+        <button class="nav-item" data-view="lovelab" type="button">
+          <span class="nav-icon">💓</span>
+          <span class="nav-label-txt">Heart Sync &amp; Letter</span>
+          <span class="nav-pill">∞</span>
         </button>
       </nav>
+
+      <div class="sidebar-footer-mini">
+        <span class="mini-dot"></span>
+        <span>Crafted with ❤️ &amp; Snow by <strong>Arunava</strong></span>
+      </div>
     </aside>
 
-    <!-- ==================== MAIN LUMINOUS WORKSPACE ==================== -->
+    <!-- ==================== MAIN WORKSPACE ==================== -->
     <div class="main-column">
-      <!-- Frosted Header with Custom Glass Dropdown + Ambient Music Box Chime -->
-      <header class="topbar glass-chrome">
+      <header class="topbar">
         <div class="topbar-left">
-          <button id="mobileMenuBtn" class="glass-icon-btn mobile-only" type="button" aria-label="Open menu">☰</button>
-          <button id="desktopSidebarBtn" class="glass-icon-btn desktop-only" type="button" aria-label="Toggle sidebar">☰</button>
+          <button id="mobileMenuBtn" class="icon-btn mobile-only" type="button" aria-label="Open menu">☰</button>
+          <button id="desktopSidebarBtn" class="icon-btn desktop-only" type="button" aria-label="Toggle sidebar">☰</button>
 
-          <!-- Custom Frosted Glass Dropdown Menu -->
+          <!-- Minimalist Soul Tone Selector -->
           <div id="personalityDropdown" class="frost-dropdown" data-value="romantic">
             <button
               type="button"
-              class="frost-dropdown-trigger sheen-hover"
+              class="frost-dropdown-trigger"
               aria-haspopup="listbox"
               aria-expanded="false"
             >
               <span class="dd-orb" id="personalityIconOrb">❄️</span>
               <span class="dd-label-wrap">
-                <span class="dd-title" id="personalityTitleText">Love GPT • Tender &amp; Romantic</span>
+                <span class="dd-title" id="personalityTitleText">Arunava • Tender &amp; Romantic</span>
               </span>
               <svg class="dd-chevron" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </button>
 
-            <div class="frost-dropdown-menu" role="listbox" aria-label="Choose Love GPT Voice Style">
-              <div class="dd-menu-header">❄️ Choose Love GPT Soul Tone</div>
-              <button type="button" class="frost-dd-option selected" role="option" aria-selected="true" data-val="romantic" data-icon="❄️" data-title="Love GPT • Tender &amp; Romantic">
+            <div class="frost-dropdown-menu" role="listbox" aria-label="Choose Arunava Conversation Tone">
+              <div class="dd-menu-header">❄️ Choose Arunava's Soul Tone</div>
+              <button type="button" class="frost-dd-option selected" role="option" aria-selected="true" data-val="romantic" data-icon="❄️" data-title="Arunava • Tender &amp; Romantic">
                 <span class="dd-opt-icon">❄️</span>
                 <span class="dd-opt-body">
                   <strong>Tender &amp; Romantic</strong>
-                  <small>Warm, sincere devotion straight from Arunava's heart</small>
+                  <small>Warm, natural &amp; heartfelt conversation</small>
                 </span>
                 <span class="dd-check">✦</span>
               </button>
-              <button type="button" class="frost-dd-option" role="option" aria-selected="false" data-val="poetic" data-icon="🌹" data-title="Love GPT • Poetic &amp; Dreamy">
+              <button type="button" class="frost-dd-option" role="option" aria-selected="false" data-val="poetic" data-icon="🌹" data-title="Arunava • Poetic &amp; Dreamy">
                 <span class="dd-opt-icon">🌹</span>
                 <span class="dd-opt-body">
                   <strong>Poetic &amp; Dreamy</strong>
-                  <small>Lyrical winter-rose imagery &amp; soulful verses</small>
+                  <small>Soft winter-rose verses &amp; lyrical warmth</small>
                 </span>
                 <span class="dd-check">✦</span>
               </button>
-              <button type="button" class="frost-dd-option" role="option" aria-selected="false" data-val="playful" data-icon="🥰" data-title="Love GPT • Sweet &amp; Playful">
+              <button type="button" class="frost-dd-option" role="option" aria-selected="false" data-val="playful" data-icon="🥰" data-title="Arunava • Sweet &amp; Playful">
                 <span class="dd-opt-icon">🥰</span>
                 <span class="dd-opt-body">
                   <strong>Sweet &amp; Playful</strong>
-                  <small>Cheerful, adoring &amp; full of cute warmth</small>
+                  <small>Cheerful, witty &amp; full of cute warmth</small>
                 </span>
                 <span class="dd-check">✦</span>
               </button>
-              <button type="button" class="frost-dd-option" role="option" aria-selected="false" data-val="royal" data-icon="👑" data-title="Love GPT • Royal Devotion">
+              <button type="button" class="frost-dd-option" role="option" aria-selected="false" data-val="royal" data-icon="👑" data-title="Arunava • Royal Devotion">
                 <span class="dd-opt-icon">👑</span>
                 <span class="dd-opt-body">
                   <strong>Royal Devotion</strong>
-                  <small>Celebrating the eternal Queen of Arunava's world</small>
+                  <small>Adoring the eternal Queen of his heart</small>
                 </span>
                 <span class="dd-check">✦</span>
               </button>
             </div>
-          </div>
-
-          <div class="topbar-meta-group">
-            <button id="musicBoxBtn" type="button" class="music-chime-pill sheen-hover" aria-pressed="false" title="Toggle Ambient Winter Music Box">
-              <span id="musicBoxIcon">🎵</span>
-              <span class="music-lbl">Music Box</span>
-            </button>
-
-            <span id="llmStatusBadge" class="llm-status-badge" title="100% On-Device Streaming Love LLM">
-              <span class="status-dot"></span>
-              <span id="llmStatusText" class="llm-status-label">On-Device Neural LLM Active</span>
-            </span>
           </div>
         </div>
       </header>
 
-      <!-- ==================== VIEW 1: PURE ASK SANCTUARY ==================== -->
-      <main id="view-chat" class="view-section active" aria-label="Ask Love GPT">
+      <!-- ==================== VIEW 1: CHAT WITH ARUNAVA ==================== -->
+      <main id="view-chat" class="view-section active" aria-label="Chat with Arunava">
         <div id="chatScrollArea" class="chat-scroll-area smooth-scroll-pane">
-          <section id="welcomeScreen" class="welcome-screen">
-            <div class="crystal-emblem-stage" aria-hidden="true">
-              <div class="crystal-ring ring-outer"></div>
-              <div class="crystal-ring ring-inner"></div>
-              <div class="crystal-orb">
-                <span class="orb-flake flake-1">❄️</span>
-                <span class="orb-flake flake-2">✨</span>
-                <span class="orb-heart">❤️</span>
-              </div>
-            </div>
-
-            <span class="frost-eyebrow">❄️ Frosted in Snow, Warmed by Love</span>
-            <h1 class="welcome-headline">
-              <span class="gradient-frost-text">Ask Anything From Your Heart</span>
-            </h1>
-            <p class="welcome-sub">
-              Every snowflake carries warmth, every memory holds magic, and every question is answered with genuine love. Type or speak whatever is on your heart.
-            </p>
-          </section>
-
           <div id="messagesContainer" class="messages-container" aria-live="polite"></div>
         </div>
 
+        <!-- Sleek Composer + Non-Clipped Wrapped Pre-Questions Below -->
         <div class="prompt-dock-outer">
-          <form id="chatForm" class="prompt-dock glass-chrome" autocomplete="off">
-            <label for="chatInput" class="sr-only">Ask your question</label>
+          <form id="chatForm" class="prompt-dock" autocomplete="off">
+            <label for="chatInput" class="sr-only">Message Arunava</label>
             <textarea
               id="chatInput"
               rows="1"
-              placeholder="Ask anything from your heart..."
-              aria-label="Ask anything from your heart"
+              placeholder="Ask Arunava anything — say hello, ask for a song, a memory of us, or anything on your heart..."
+              aria-label="Message Arunava"
             ></textarea>
-            <button type="button" id="voiceMicBtn" class="dock-icon-btn" title="Speak your question">
-              🎙️
-            </button>
-            <button type="submit" id="sendBtn" class="send-frost-btn sheen-hover" aria-label="Send question" title="Send">
-              ➤
+            <button type="submit" id="sendBtn" class="send-frost-btn" aria-label="Send message" title="Send">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
             </button>
           </form>
+
+          <!-- Wrapped Pre-Questions Bar (Never clips or cuts off pills!) -->
+          <div id="preQuestionsBar" class="pre-questions-bar" aria-label="Suggested questions"></div>
         </div>
       </main>
 
-      <!-- ==================== VIEW 2: REALISTIC 50-PAGE HARDCOVER SLIDING BOOK SCRAPBOOK ==================== -->
-      <section id="view-scrapbook" class="view-section" aria-label="50-Page Realistic Sliding Book Scrapbook">
+      <!-- ==================== VIEW 2: 50-PAGE SCRAPBOOK (50 DIFFERENT OPENINGS) ==================== -->
+      <section id="view-scrapbook" class="view-section" aria-label="50-Page Scrapbook with 50 Unique Openings">
         <div class="page-scroll smooth-scroll-pane">
-          <div class="section-hero">
-            <span class="frost-eyebrow">📖✨ Realistic Hardcover Book • 50 Sliding Pages</span>
-            <h2 class="section-title">Heirloom 50-Page Photo Scrapbook</h2>
-            <p class="section-desc">Slide each physical page across the spine — complete that page's tactile paper craft to unveil its Polaroid memories &amp; handwritten note!</p>
+          <div class="section-hero furnished-hero anim-stagger">
+            <span class="frost-eyebrow">📖❄️ 50 Pages • 50 Distinct Tactile Openings • 120 Memories</span>
+            <h2 class="section-title">Heirloom 50-Page Love Scrapbook</h2>
+            <p class="section-desc">Every page from 1 to 50 has its own unique interactive craft opening that unveils our solo &amp; couple Polaroids with a gentle frosted reveal.</p>
+            <div class="hero-stat-ribbon">
+              <span>📖 50 Handcrafted Spreads</span>
+              <span>✨ 50 Unique Opening Mechanics</span>
+              <span>💑 Solo &amp; Couple Polaroids</span>
+            </div>
           </div>
 
-          <!-- Closed 3D Velvet Hardcover Book -->
-          <div id="scrapbookCoverStage" class="scrapbook-cover-stage">
+          <!-- Closed Velvet Hardcover Album -->
+          <div id="scrapbookCoverStage" class="scrapbook-cover-stage anim-stagger">
             <div class="real-hardcover-closed">
               <div class="book-3d-spine" aria-hidden="true"></div>
               <div class="book-3d-pages-edge" aria-hidden="true"></div>
               <div class="hardcover-front-panel">
-                <span class="cover-ribbon-badge">❄️ Bound Velvet Edition • 50 Pages • 100 Memories</span>
+                <span class="cover-ribbon-badge">❄️ Collector's Snow &amp; Rose Edition • 50 Unique Openings</span>
                 <div class="cover-emblem">📖❤️❄️</div>
                 <h3 class="cover-title">Our 50-Page Book of Forever</h3>
-                <p class="cover-sub">Slide the silk clasp below to open the hardcover album and begin Page 1.</p>
-
+                <p class="cover-sub">Slide the silk clasp across to open the velvet album and explore 50 unique page-opening crafts.</p>
                 <div class="clasp-slide-box">
-                  <label for="bookClaspSlider" class="clasp-label">🎀 Slide Silk Clasp Right to Open Book →</label>
+                  <label for="bookClaspSlider" class="clasp-label">🎀 Slide Silk Clasp Right to Open Album →</label>
                   <input id="bookClaspSlider" type="range" min="0" max="100" value="0" class="tactile-ribbon-slider" />
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Open 2-Page Hardcover Book Spread with Real Page-Slide Turning & Per-Page Craft Activity -->
+          <!-- Open 2-Page Spread -->
           <div id="scrapbookOpenStage" class="scrapbook-open-stage" hidden>
-            <div class="scrapbook-top-controls">
+            <div class="scrapbook-top-controls surface-card furnished-toolbar">
               <div class="chapter-pills" id="scrapbookChapters">
-                <button type="button" class="filter-pill active" data-page="1">Ch 1 (p.1)</button>
-                <button type="button" class="filter-pill" data-page="11">Ch 2 (p.11)</button>
-                <button type="button" class="filter-pill" data-page="21">Ch 3 (p.21)</button>
-                <button type="button" class="filter-pill" data-page="31">Ch 4 (p.31)</button>
-                <button type="button" class="filter-pill" data-page="41">Ch 5 (p.41)</button>
+                <button type="button" class="filter-pill active" data-page="1">Ch 1<span class="pill-sub"> (p.1–10)</span></button>
+                <button type="button" class="filter-pill" data-page="11">Ch 2<span class="pill-sub"> (p.11–20)</span></button>
+                <button type="button" class="filter-pill" data-page="21">Ch 3<span class="pill-sub"> (p.21–30)</span></button>
+                <button type="button" class="filter-pill" data-page="31">Ch 4<span class="pill-sub"> (p.31–40)</span></button>
+                <button type="button" class="filter-pill" data-page="41">Ch 5<span class="pill-sub"> (p.41–50)</span></button>
               </div>
-              <div style="display:flex;gap:8px;align-items:center;">
+              <div class="toolbar-right-inline">
                 <span id="sbUnlockedBadge" class="score-pill">Unveiled: 0 / 50 Pages 📖</span>
-                <button type="button" id="closeScrapbookBtn" class="frosted-pill-btn">📕 Close Book</button>
+                <button type="button" id="closeScrapbookBtn" class="ghost-pill-btn">📕 Close Album</button>
               </div>
             </div>
 
-            <!-- Physical Open Hardcover Book -->
             <div class="real-open-book-shell" id="realOpenBookShell">
               <div class="book-paper-stack left-stack" aria-hidden="true"></div>
               <div class="book-silk-bookmark" aria-hidden="true"></div>
 
               <div id="bookSlidingSheet" class="book-two-page-spread">
-                <!-- Left Book Page -->
                 <div id="sbLeftPage" class="book-sheet left-sheet"></div>
-
-                <!-- Center Stitched Spine Gutter -->
                 <div class="book-center-gutter" aria-hidden="true"></div>
-
-                <!-- Right Book Page (Houses Tactile Craft Activity -> Unveils Photo & Note!) -->
                 <div id="sbRightPage" class="book-sheet right-sheet"></div>
               </div>
 
               <div class="book-paper-stack right-stack" aria-hidden="true"></div>
             </div>
 
-            <!-- Realistic Tactile Page-Slide Turn Bar -->
-            <div class="book-slide-turn-dock frost-card">
-              <button type="button" id="sbPrevBtn" class="frosted-pill-btn">‹ Slide Back</button>
-
+            <div class="book-slide-turn-dock surface-card">
+              <button type="button" id="sbPrevBtn" class="ghost-pill-btn">‹ Previous Page</button>
               <div class="page-curl-slider-wrap">
                 <div class="curl-hint-row">
                   <span id="sbPageIndicator" class="score-pill">Page 1 of 50</span>
-                  <span class="slide-turn-tip">👈 Drag Page-Curl Slider to Slide &amp; Turn Page →</span>
+                  <span id="sbMechanismBadge" class="slide-turn-tip">Opening Style #1 of 50</span>
                 </div>
-                <input id="sbPageTurnDrag" type="range" min="0" max="100" value="0" aria-label="Slide across to turn to next page" class="tactile-ribbon-slider" />
+                <input id="sbPageTurnDrag" type="range" min="0" max="100" value="0" aria-label="Slide across to turn page" class="tactile-ribbon-slider" />
               </div>
-
-              <button type="button" id="sbNextBtn" class="send-frost-btn sheen-hover">Slide Next Page ›</button>
+              <button type="button" id="sbNextBtn" class="primary-pill-btn">Next Page ›</button>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ==================== VIEW 3: REALISTIC 4-WING CROSS-SHAPED ORIGAMI EXPLOSION BOX ==================== -->
-      <section id="view-explosion" class="view-section" aria-label="Realistic 4-Wing Origami Explosion Box">
+      <!-- ==================== VIEW 3: 50x ORIGAMI EXPLOSION BOX (50 DISTINCT ORIGAMI DESIGNS) ==================== -->
+      <section id="view-explosion" class="view-section" aria-label="50x Origami Explosion Box">
         <div class="page-scroll smooth-scroll-pane">
-          <div class="section-hero">
-            <span class="frost-eyebrow">🎁🌸 4 Unfolding Wings (Up • Down • Left • Right) × 5 Nested Boxes = 50 Origami Crafts</span>
-            <h2 class="section-title">Realistic Origami Explosion Box</h2>
-            <p class="section-desc">Untie the ribbon bow and lift the lid — watch all 4 box walls fall flat into Top, Bottom, Left &amp; Right origami wings that you physically unfold!</p>
+          <div class="section-hero furnished-hero anim-stagger">
+            <span class="frost-eyebrow">🎁🌸 50 Compartments • 10 Distinct Origami Architectures × 5 Nested Boxes</span>
+            <h2 class="section-title">4-Wing Origami Explosion Box</h2>
+            <p class="section-desc">Untie the satin bow and lift the lid — every compartment features a distinct paper-origami sculpture that unfolds to reveal a veiled memory.</p>
+            <div class="hero-stat-ribbon">
+              <span>🎁 5 Concentric Nested Boxes</span>
+              <span>🌸 50 Unique Origami Sculptures</span>
+              <span>✨ Progressive Frosted Unveil</span>
+            </div>
           </div>
 
-          <!-- Stage 1: Closed 3D Cube Gift Box (Slide Ribbon + Lift Lid) -->
-          <div id="explosionClosedStage" class="explosion-closed-stage">
+          <div id="explosionClosedStage" class="explosion-closed-stage anim-stagger">
             <div class="iso-gift-box-scene">
               <div id="isoGiftCube" class="iso-gift-cube">
                 <div id="isoBoxLid" class="iso-box-lid">
@@ -313,451 +286,517 @@
                 </div>
                 <div class="iso-box-body">
                   <div class="body-ribbon-v"></div>
-                  <span class="box-front-emblem">🎁 5 Nested Boxes Inside</span>
+                  <span class="box-front-emblem">🎁 50 Unique Origami Inside</span>
                 </div>
               </div>
 
-              <div class="box-unfold-controls frost-card">
+              <div class="box-unfold-controls surface-card">
                 <h3 id="boxStepHeading">Step 1: Slide Satin Ribbon to Untie Bow</h3>
-                <p id="boxStepSub">Drag the silk ribbon slider all the way across to release the 4 folded origami walls!</p>
+                <p id="boxStepSub">Drag the silk ribbon slider across to release all 4 origami box walls.</p>
                 <input id="untieBoxRibbonSlider" type="range" min="0" max="100" value="0" class="tactile-ribbon-slider" aria-label="Slide ribbon to untie explosion box" />
-                <button type="button" id="liftBoxLidBtn" class="send-frost-btn large-cta-btn sheen-hover" hidden>
-                  ✨ Lift Box Lid &amp; Drop All 4 Walls Flat!
+                <button type="button" id="liftBoxLidBtn" class="primary-pill-btn large-cta-btn" hidden>
+                  ✨ Lift Lid &amp; Drop All 4 Origami Wings Flat
                 </button>
               </div>
             </div>
           </div>
 
-          <!-- Stage 2: Realistic Cross-Shaped (+) Unfolded Tabletop Explosion Box (UP / LEFT / CENTER / RIGHT / DOWN Wings!) -->
           <div id="explosionOpenStage" class="explosion-open-stage" hidden>
-            <div class="explosion-status-bar frost-card">
+            <div class="explosion-status-bar surface-card furnished-toolbar">
               <div>
-                <strong id="expProgressLabel">Unfolded: 0 / 50 Origami Surprises 🎁</strong>
+                <strong id="expProgressLabel">Unfolded: 0 / 50 Unique Origami Folds 🎁</strong>
                 <div class="exp-mini-progress"><div id="expProgressBar" style="width: 0%"></div></div>
               </div>
 
               <div class="exp-layer-tabs" id="expLayerTabs" role="tablist" aria-label="5 Nested Concentric Boxes">
-                <button type="button" class="filter-pill active" data-boxlayer="1">Box 1 • Outer (1–10)</button>
-                <button type="button" class="filter-pill" data-boxlayer="2">Box 2 • Rose (11–20)</button>
-                <button type="button" class="filter-pill" data-boxlayer="3">Box 3 • Frost (21–30)</button>
-                <button type="button" class="filter-pill" data-boxlayer="4">Box 4 • Star (31–40)</button>
-                <button type="button" class="filter-pill" data-boxlayer="5">Box 5 • Heart Core (41–50)</button>
+                <button type="button" class="filter-pill active" data-boxlayer="1">Box 1<span class="pill-sub"> (1–10)</span></button>
+                <button type="button" class="filter-pill" data-boxlayer="2">Box 2<span class="pill-sub"> (11–20)</span></button>
+                <button type="button" class="filter-pill" data-boxlayer="3">Box 3<span class="pill-sub"> (21–30)</span></button>
+                <button type="button" class="filter-pill" data-boxlayer="4">Box 4<span class="pill-sub"> (31–40)</span></button>
+                <button type="button" class="filter-pill" data-boxlayer="5">Box 5<span class="pill-sub"> (41–50)</span></button>
               </div>
 
-              <button type="button" id="refoldBoxBtn" class="frosted-pill-btn">🎀 Fold Walls Up</button>
+              <button type="button" id="refoldBoxBtn" class="ghost-pill-btn">🎀 Fold Box Closed</button>
             </div>
 
-            <!-- THE REAL CROSS-SHAPED (+) 4-WING TABLETOP EXPLOSION BOX -->
             <div id="explosionCrossTable" class="explosion-cross-table">
-              <!-- UP / TOP WALL WING (Origami Triangle Squash Folds) -->
               <div class="box-wing wing-up" id="wingUpContainer"></div>
-
-              <!-- LEFT WALL WING (Waterfall Pull-Tab Cascades) -->
               <div class="box-wing wing-left" id="wingLeftContainer"></div>
-
-              <!-- CENTER HEART BASE (Double Gatefold Shutters + Nested Inner Box Lid!) -->
               <div class="box-wing wing-center" id="wingCenterContainer"></div>
-
-              <!-- RIGHT WALL WING (Pleated Zig-Zag Accordions) -->
               <div class="box-wing wing-right" id="wingRightContainer"></div>
-
-              <!-- DOWN / BOTTOM WALL WING (Belly-Band & Envelope Flap Pockets) -->
               <div class="box-wing wing-down" id="wingDownContainer"></div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ==================== VIEW 4: 10 PLAYABLE ROMANTIC ACTIVITIES ==================== -->
-      <section id="view-activities" class="view-section" aria-label="10 Romantic Activities">
+      <!-- ==================== VIEW 4: PLAY TOGETHER IN THE SNOW (FURNISHED COUPLE ARCADE) ==================== -->
+      <section id="view-activities" class="view-section" aria-label="Play Together Interactive Games">
         <div class="page-scroll smooth-scroll-pane">
-          <div class="section-hero">
-            <span class="frost-eyebrow">🎮❄️ 10 Interactive Experiences</span>
-            <h2 class="section-title">Play Together in the Frost</h2>
-            <p class="section-desc">Ten playful, romantic mini-games and winter-frost experiences crafted with love, snow, and favorite treats.</p>
+          <div class="section-hero furnished-hero anim-stagger">
+            <span class="frost-eyebrow">🎮❄️ Couple Winter Arcade • 10 Furnished Interactive Experiences</span>
+            <h2 class="section-title">Play Together in the Snow</h2>
+            <p class="section-desc">Earn Couple Love Stars across 10 interactive games — catch falling treats, wipe frosted glass, spin destiny wheels, and test your random story trivia!</p>
+
+            <!-- Live Couple Arcade Scoreboard Banner -->
+            <div class="arcade-trophy-banner surface-card">
+              <div class="trophy-stat">
+                <span class="trophy-lbl">🏆 Couple Love XP</span>
+                <strong id="arcadeTotalXp">120 XP ✨</strong>
+              </div>
+              <div class="trophy-stat">
+                <span class="trophy-lbl">🥟 Treat Rush High Score</span>
+                <strong id="arcadeBestRush">0 pts</strong>
+              </div>
+              <div class="trophy-stat">
+                <span class="trophy-lbl">💘 Random Trivia Best</span>
+                <strong id="arcadeBestQuiz">0 / 8</strong>
+              </div>
+              <div class="trophy-stat">
+                <span class="trophy-lbl">🫧 Bubbles &amp; Vows</span>
+                <strong id="arcadeInteractions">Active ❤️</strong>
+              </div>
+            </div>
           </div>
 
-          <div id="activityTabs" class="activity-tabs" role="tablist" aria-label="Choose an activity">
-            <button class="act-tab active" data-act="1" type="button">1. 🥟 Catch Treats</button>
-            <button class="act-tab" data-act="2" type="button">2. ❄️ Scratch Frost</button>
-            <button class="act-tab" data-act="3" type="button">3. 🃏 Memory Match</button>
+          <div id="activityTabs" class="activity-tabs anim-stagger" role="tablist" aria-label="Choose an activity">
+            <button class="act-tab active" data-act="1" type="button">1. 🥟 Treat Rush</button>
+            <button class="act-tab" data-act="2" type="button">2. ❄️ Frost Reveal</button>
+            <button class="act-tab" data-act="3" type="button">3. 🃏 Couple Match</button>
             <button class="act-tab" data-act="4" type="button">4. 🎡 Date Wheel</button>
             <button class="act-tab" data-act="5" type="button">5. 🔮 Snow Globe</button>
-            <button class="act-tab" data-act="6" type="button">6. 💘 Heart Quiz</button>
-            <button class="act-tab" data-act="7" type="button">7. 🌌 Live Aurora</button>
-            <button class="act-tab" data-act="8" type="button">8. 🌹 Rose Petals</button>
-            <button class="act-tab" data-act="9" type="button">9. 🎟️ Love Ticket</button>
-            <button class="act-tab" data-act="10" type="button">10. 🫧 Whisper Pop</button>
+            <button class="act-tab" data-act="6" type="button">6. 💘 Random Trivia</button>
+            <button class="act-tab" data-act="7" type="button">7. 🌌 Aurora Sky</button>
+            <button class="act-tab" data-act="8" type="button">8. 🌹 Rose Vows</button>
+            <button class="act-tab" data-act="9" type="button">9. 🎟️ Date Ticket</button>
+            <button class="act-tab" data-act="10" type="button">10. 🫧 Bubble Pop</button>
           </div>
 
-          <div class="activity-stage-wrap">
-            <!-- ACTIVITY 1 -->
-            <div id="act-panel-1" class="act-panel active frost-card">
+          <div class="activity-stage-wrap anim-stagger">
+            <!-- GAME 1: COMPLETELY REBUILT TREAT RUSH: COMBO CATCHER -->
+            <div id="act-panel-1" class="act-panel active surface-card furnished-game-card">
               <div class="act-panel-head">
                 <div>
-                  <h3>🥟 Catch All Her Loved Treats!</h3>
-                  <p>Slide across the snowy sky to catch 3D MOMOs, Ice Cream, KitKat, Kurkure &amp; Chips — dodge the icy blocks 🧊!</p>
+                  <h3>🥟 Treat Rush: Combo Catcher</h3>
+                  <p>Glide your cursor/finger over the snow sky (or use the Left/Right buttons &amp; arrow keys) to catch MOMOs, Ice Cream, KitKats &amp; Golden Stars — dodge icy blocks 🧊!</p>
                 </div>
                 <div class="act-score-bar">
-                  <span id="catchScoreBadge" class="score-pill">Score: 0 ❤️</span>
-                  <button type="button" id="startCatchGameBtn" class="send-frost-btn sheen-hover">▶ Play Game</button>
+                  <span id="catchLevelBadge" class="score-pill">Lvl 1 ❄️</span>
+                  <span id="catchScoreBadge" class="score-pill">Score: 0 • Streak: 0x 🔥</span>
+                  <span id="catchLivesBadge" class="score-pill">❤️❤️❤️</span>
+                  <button type="button" id="startCatchGameBtn" class="primary-pill-btn">▶ Start Rush</button>
                 </div>
               </div>
-              <canvas id="catchGameCanvas" width="760" height="360" class="game-canvas"></canvas>
-              <div id="catchRewardMsg" class="act-reward-note">Catch 15 treats to unlock a special love reward! ❄️💖</div>
+
+              <div class="treat-rush-stage-wrap">
+                <canvas id="catchGameCanvas" width="760" height="360" class="game-canvas"></canvas>
+                <div class="rush-touch-controls">
+                  <button type="button" id="rushLeftBtn" class="ghost-pill-btn">◀ Move Left</button>
+                  <button type="button" id="rushBoostBtn" class="ghost-pill-btn">🧲 Magnet Pulse</button>
+                  <button type="button" id="rushRightBtn" class="ghost-pill-btn">Move Right ▶</button>
+                </div>
+              </div>
+              <div id="catchRewardMsg" class="act-reward-note">Tap the game screen or “▶ Start Rush” — reach 20 points to win a real-life MOMO &amp; Ice Cream date with Arunava! 🥟❤️</div>
             </div>
 
-            <!-- ACTIVITY 2 -->
-            <div id="act-panel-2" class="act-panel frost-card">
+            <!-- GAME 2: UPGRADED FROST REVEAL STUDIO -->
+            <div id="act-panel-2" class="act-panel surface-card furnished-game-card">
               <div class="act-panel-head">
                 <div>
-                  <h3>❄️ Wipe the Frosted Winter Window</h3>
-                  <p>Rub gently across the frosted window with your finger or mouse to reveal warmth hidden beneath the snow!</p>
+                  <h3>❄️ Frosted Window Memory Reveal</h3>
+                  <p>Rub your finger or cursor across the frosted windowpane — clear 60% of the snow frost to sparkle &amp; unveil the full memory!</p>
                 </div>
-                <button type="button" id="resetFrostBtn" class="send-frost-btn sheen-hover">❄️ Refrost New Memory</button>
+                <div class="act-score-bar">
+                  <span id="frostClearPctBadge" class="score-pill">Cleared: 0% ❄️</span>
+                  <button type="button" id="frostWarmBreathBtn" class="ghost-pill-btn">🌬️ Warm Breath (+25%)</button>
+                  <button type="button" id="resetFrostBtn" class="primary-pill-btn">❄️ Next Memory</button>
+                </div>
               </div>
               <div class="frost-scratch-stage">
-                <img id="frostHiddenImg" src="images/pic-001.jpg" alt="Hidden cherished memory" />
+                <img id="frostHiddenImg" src="images/pic-103.jpg" alt="Hidden cherished memory" />
                 <canvas id="frostScratchCanvas" width="640" height="380"></canvas>
               </div>
-              <div id="frostScratchWhisper" class="act-reward-note">Wipe away the winter frost to reveal the warmth underneath... ❄️❤️</div>
+              <div id="frostScratchWhisper" class="act-reward-note">Wipe the icy frost or tap “🌬️ Warm Breath” to reveal the warmth waiting behind the snow... ❄️❤️</div>
             </div>
 
-            <!-- ACTIVITY 3 -->
-            <div id="act-panel-3" class="act-panel frost-card">
+            <!-- GAME 3: UPGRADED COUPLE MEMORY MATCH WITH PEEK & TIMER -->
+            <div id="act-panel-3" class="act-panel surface-card furnished-game-card">
               <div class="act-panel-head">
                 <div>
-                  <h3>🃏 Crystal Pair Memory Match</h3>
-                  <p>Flip two frosted crystal tiles at a time to match cherished symbols &amp; portraits!</p>
+                  <h3>🃏 Crystal Couple &amp; Treat Match</h3>
+                  <p>Flip crystal cards to match our First Meet, Official Meet, portraits, and favorite cravings!</p>
                 </div>
                 <div class="act-score-bar">
-                  <span id="matchMovesBadge" class="score-pill">Moves: 0 • Pairs: 0/6</span>
-                  <button type="button" id="resetMatchBtn" class="send-frost-btn sheen-hover">🔄 Shuffle Deck</button>
+                  <span id="matchMovesBadge" class="score-pill">Moves: 0 • Pairs: 0/8</span>
+                  <button type="button" id="peekMatchBtn" class="ghost-pill-btn">👁️ 1.5s Peek</button>
+                  <button type="button" id="resetMatchBtn" class="primary-pill-btn">🔄 New Deck</button>
                 </div>
               </div>
               <div id="memoryMatchGrid" class="memory-match-grid"></div>
+              <div id="matchStatusNote" class="act-reward-note">Flip any two crystal cards or use “👁️ 1.5s Peek” to find all 8 matching pairs! ✨</div>
             </div>
 
-            <!-- ACTIVITY 4 -->
-            <div id="act-panel-4" class="act-panel frost-card">
+            <!-- GAME 4: UPGRADED DESTINY DATE WHEEL -->
+            <div id="act-panel-4" class="act-panel surface-card furnished-game-card">
               <div class="act-panel-head">
                 <div>
-                  <h3>🎡 Spin Our Dream Date Wheel</h3>
-                  <p>Let destiny pick the next cozy adventure together!</p>
+                  <h3>🎡 Spin Our Next Date &amp; Sweet Promise</h3>
+                  <p>Spin the 8-slice frost wheel to pick our next romantic outing and send it straight to Arunava!</p>
                 </div>
-                <button type="button" id="spinWheelBtn" class="send-frost-btn sheen-hover">✨ Spin the Wheel</button>
+                <div class="act-score-bar">
+                  <button type="button" id="spinWheelBtn" class="primary-pill-btn">✨ Spin Date Wheel</button>
+                  <button type="button" id="sendWheelToChatBtn" class="ghost-pill-btn" hidden>💬 Ask Arunava For This Date</button>
+                </div>
               </div>
               <div class="wheel-arena">
                 <div class="wheel-pointer" aria-hidden="true">▼</div>
                 <canvas id="dateWheelCanvas" width="320" height="320" class="round-responsive-canvas"></canvas>
               </div>
-              <div id="wheelResultText" class="act-reward-note">Tap “Spin the Wheel” to discover our next romantic date! 🎡❤️</div>
+              <div id="wheelResultText" class="act-reward-note">Tap “✨ Spin Date Wheel” to let destiny choose our next cozy outing! 🎡❤️</div>
             </div>
 
-            <!-- ACTIVITY 5 -->
-            <div id="act-panel-5" class="act-panel frost-card">
+            <!-- GAME 5: UPGRADED INTERACTIVE SNOW GLOBE -->
+            <div id="act-panel-5" class="act-panel surface-card furnished-game-card">
               <div class="act-panel-head">
                 <div>
-                  <h3>🔮 Shake the Enchanted Snow Globe</h3>
-                  <p>Swirl shimmering winter snow inside the crystal dome to awaken a romantic prophecy.</p>
+                  <h3>🔮 Enchanted Couple Snow Globe</h3>
+                  <p>Swirl your finger inside the crystal dome, switch snowfall styles, or shake for a romantic prophecy!</p>
                 </div>
-                <button type="button" id="shakeGlobeBtn" class="send-frost-btn sheen-hover">❄️ Shake Snow Globe</button>
+                <div class="act-score-bar">
+                  <button type="button" id="globeGoldModeBtn" class="ghost-pill-btn">✨ Toggle Rose Stardust</button>
+                  <button type="button" id="shakeGlobeBtn" class="primary-pill-btn">❄️ Shake Snow Globe</button>
+                </div>
               </div>
               <div class="globe-wrap">
                 <canvas id="snowGlobeCanvas" width="320" height="320" class="globe-canvas round-responsive-canvas"></canvas>
               </div>
-              <div id="globeFortuneText" class="act-reward-note">Tap the snow globe to swirl the snowflakes and read your heart's fortune! 🔮❄️</div>
+              <div id="globeFortuneText" class="act-reward-note">Swirl or tap the snow globe to awaken a winter love prophecy! 🔮❄️</div>
             </div>
 
-            <!-- ACTIVITY 6 -->
-            <div id="act-panel-6" class="act-panel frost-card">
+            <!-- GAME 6: RANDOMIZED 8-QUESTION STORY & FAVORITES TRIVIA (ITEM #5) -->
+            <div id="act-panel-6" class="act-panel surface-card furnished-game-card">
               <div class="act-panel-head">
                 <div>
-                  <h3>💘 Heartbeat Trivia Quiz</h3>
-                  <p>Five sweet questions celebrating our dates, cravings, and snowy dreams!</p>
+                  <h3>💘 Our Story &amp; Favorites Trivia</h3>
+                  <p>Eight playful questions celebrating every milestone, craving, and dream we share — freshly randomized every single round!</p>
                 </div>
-                <span id="quizProgressBadge" class="score-pill">Question 1 / 5</span>
+                <div class="act-score-bar">
+                  <span id="quizProgressBadge" class="score-pill">Question 1 / 8</span>
+                  <button type="button" id="shuffleQuizBtn" class="ghost-pill-btn">🔀 New Random 8 Questions</button>
+                </div>
               </div>
               <div id="quizBody" class="quiz-body"></div>
             </div>
 
-            <!-- ACTIVITY 7 -->
-            <div id="act-panel-7" class="act-panel frost-card">
+            <!-- GAME 7: INTERACTIVE LAPLAND AURORA PAINTER -->
+            <div id="act-panel-7" class="act-panel surface-card furnished-game-card">
               <div class="act-panel-head">
                 <div>
-                  <h3>🌌 Living Lapland Northern Lights</h3>
-                  <p>Glide across the starry Finland sky to weave shimmering, undulating Aurora curtains over our warm glass igloo!</p>
+                  <h3>🌌 Paint Finland's Northern Lights</h3>
+                  <p>Glide across the starry Lapland sky above our glass igloo to weave glowing Aurora curtains &amp; launch wish stars!</p>
                 </div>
                 <div class="act-score-bar">
-                  <button type="button" id="auroraShootingStarBtn" class="frosted-pill-btn">🌠 Shooting Star Wish</button>
-                  <button type="button" id="auroraClearBtn" class="send-frost-btn sheen-hover">🌌 Reset Curtains</button>
+                  <button type="button" id="auroraHeartSkyBtn" class="ghost-pill-btn">💖 Aurora Heart</button>
+                  <button type="button" id="auroraShootingStarBtn" class="ghost-pill-btn">🌠 Shooting Stars</button>
+                  <button type="button" id="auroraClearBtn" class="primary-pill-btn">🌌 Fresh Sky</button>
                 </div>
               </div>
-
               <div class="aurora-palette-bar" id="auroraPaletteBar" aria-label="Aurora Curtain Colors">
                 <button type="button" class="filter-pill active" data-hue="154">💚 Emerald</button>
                 <button type="button" class="filter-pill" data-hue="334">💖 Rose Quartz</button>
                 <button type="button" class="filter-pill" data-hue="276">💜 Violet</button>
-                <button type="button" class="filter-pill" data-hue="192">🩵 Arctic Cyan</button>
+                <button type="button" class="filter-pill" data-hue="192">🩵 Arctic Blue</button>
                 <button type="button" class="filter-pill" data-hue="rainbow">🌈 Prismatic</button>
               </div>
-
-              <canvas id="auroraPaintCanvas" width="760" height="380" class="game-canvas aurora-sky-canvas"></canvas>
-              <div id="auroraWishNote" class="act-reward-note">Swipe across the starry sky to weave dancing Northern Lights! 🇫🇮❄️❤️</div>
+              <canvas id="auroraPaintCanvas" width="760" height="360" class="game-canvas aurora-sky-canvas"></canvas>
+              <div id="auroraWishNote" class="act-reward-note">Glide across the sky to weave Northern Lights over our Lapland igloo! 🇫🇮❄️❤️</div>
             </div>
 
-            <!-- ACTIVITY 8 -->
-            <div id="act-panel-8" class="act-panel frost-card">
+            <!-- GAME 8: 12-PETAL BLOOMING ROSE VOWS -->
+            <div id="act-panel-8" class="act-panel surface-card furnished-game-card">
               <div class="act-panel-head">
                 <div>
-                  <h3>🌹 Pluck a Blooming Rose Petal</h3>
-                  <p>Click each glowing rose petal to float a new confession from Arunava's heart!</p>
+                  <h3>🌹 Pluck the 12-Petal Rose of Vows</h3>
+                  <p>Pluck each velvety petal one by one to reveal 12 personal vows from Arunava's heart.</p>
                 </div>
-                <button type="button" id="bloomRoseBtn" class="send-frost-btn sheen-hover">🌹 Bloom Fresh Rose</button>
+                <div class="act-score-bar">
+                  <span id="rosePetalCountBadge" class="score-pill">Petals Left: 12 🌹</span>
+                  <button type="button" id="bloomRoseBtn" class="primary-pill-btn">🌹 Bloom New Rose</button>
+                </div>
               </div>
               <div id="roseStage" class="rose-stage"></div>
-              <div id="roseConfessionText" class="act-reward-note">Touch any petal on the rose to hear what Arunava's heart whispers... 🌹❤️</div>
+              <div id="roseConfessionText" class="act-reward-note">Tap any glowing rose petal to unveil a heartfelt vow... 🌹❤️</div>
             </div>
 
-            <!-- ACTIVITY 9 -->
-            <div id="act-panel-9" class="act-panel frost-card">
+            <!-- GAME 9: CUSTOM REDEEMABLE COUPLE DATE TICKET -->
+            <div id="act-panel-9" class="act-panel surface-card furnished-game-card">
               <div class="act-panel-head">
                 <div>
-                  <h3>🎟️ Mint a Redeemable Love Ticket</h3>
-                  <p>Customize your ideal treat and setting using the frosted menus below — 100% redeemable with Arunava anytime!</p>
+                  <h3>🎟️ Mint Your VIP Date Pass</h3>
+                  <p>Pick your craving and dream setting, then stamp the official seal or redeem it directly in chat with Arunava!</p>
                 </div>
+                <button type="button" id="redeemTicketChatBtn" class="ghost-pill-btn">💬 Redeem Pass in Chat</button>
               </div>
               <div class="ticket-controls">
                 <div id="treatDropdown" class="frost-dropdown" data-value="Steaming Hot MOMOs 🥟">
-                  <button type="button" class="frost-dropdown-trigger sheen-hover" aria-haspopup="listbox" aria-expanded="false">
+                  <button type="button" class="frost-dropdown-trigger" aria-haspopup="listbox" aria-expanded="false">
                     <span class="dd-orb">🥟</span>
                     <span class="dd-label-wrap"><span class="dd-title">Steaming Hot MOMOs</span></span>
-                    <svg class="dd-chevron" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <svg class="dd-chevron" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
                   </button>
                   <div class="frost-dropdown-menu" role="listbox">
-                    <button type="button" class="frost-dd-option selected" data-val="Steaming Hot MOMOs 🥟" data-icon="🥟" data-title="Steaming Hot MOMOs"><span class="dd-opt-icon">🥟</span><span class="dd-opt-body"><strong>Steaming Hot MOMOs</strong><small>With fiery chutney</small></span><span class="dd-check">✦</span></button>
-                    <button type="button" class="frost-dd-option" data-val="Creamy Ice Cream Tub 🍨" data-icon="🍨" data-title="Creamy Ice Cream Tub"><span class="dd-opt-icon">🍨</span><span class="dd-opt-body"><strong>Creamy Ice Cream Tub</strong><small>Velvety sweet scoops</small></span><span class="dd-check">✦</span></button>
-                    <button type="button" class="frost-dd-option" data-val="Endless KitKat Bars 🍫" data-icon="🍫" data-title="Endless KitKat Bars"><span class="dd-opt-icon">🍫</span><span class="dd-opt-body"><strong>Endless KitKat Bars</strong><small>Crispy chocolate breaks</small></span><span class="dd-check">✦</span></button>
-                    <button type="button" class="frost-dd-option" data-val="Kurkure &amp; Chips Feast 🌶️🥔" data-icon="🌶️" data-title="Kurkure &amp; Chips Feast"><span class="dd-opt-icon">🌶️</span><span class="dd-opt-body"><strong>Kurkure &amp; Chips Feast</strong><small>Crunchy chatpata party</small></span><span class="dd-check">✦</span></button>
+                    <button type="button" class="frost-dd-option selected" data-val="Steaming Hot MOMOs 🥟" data-icon="🥟" data-title="Steaming Hot MOMOs"><span class="dd-opt-icon">🥟</span><span class="dd-opt-body"><strong>Steaming Hot MOMOs</strong><small>With fiery red chutney</small></span><span class="dd-check">✦</span></button>
+                    <button type="button" class="frost-dd-option" data-val="Creamy Ice Cream Tub 🍨" data-icon="🍨" data-title="Creamy Ice Cream Tub"><span class="dd-opt-icon">🍨</span><span class="dd-opt-body"><strong>Creamy Ice Cream Tub</strong><small>Frosty sweet scoops</small></span><span class="dd-check">✦</span></button>
+                    <button type="button" class="frost-dd-option" data-val="Crispy KitKat Box 🍫" data-icon="🍫" data-title="Crispy KitKat Box"><span class="dd-opt-icon">🍫</span><span class="dd-opt-body"><strong>Crispy KitKat Box</strong><small>Both halves for you</small></span><span class="dd-check">✦</span></button>
+                    <button type="button" class="frost-dd-option" data-val="Kurkure &amp; Chips Party 🌶️🥔" data-icon="🌶️" data-title="Kurkure &amp; Chips Party"><span class="dd-opt-icon">🌶️</span><span class="dd-opt-body"><strong>Kurkure &amp; Chips Party</strong><small>Chatpata movie snacks</small></span><span class="dd-check">✦</span></button>
                   </div>
                 </div>
 
                 <div id="settingDropdown" class="frost-dropdown" data-value="Cozy Winter Evening ❄️">
-                  <button type="button" class="frost-dropdown-trigger sheen-hover" aria-haspopup="listbox" aria-expanded="false">
+                  <button type="button" class="frost-dropdown-trigger" aria-haspopup="listbox" aria-expanded="false">
                     <span class="dd-orb">❄️</span>
                     <span class="dd-label-wrap"><span class="dd-title">Cozy Winter Evening</span></span>
-                    <svg class="dd-chevron" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <svg class="dd-chevron" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
                   </button>
                   <div class="frost-dropdown-menu" role="listbox">
-                    <button type="button" class="frost-dd-option selected" data-val="Cozy Winter Evening ❄️" data-icon="❄️" data-title="Cozy Winter Evening"><span class="dd-opt-icon">❄️</span><span class="dd-opt-body"><strong>Cozy Winter Evening</strong><small>Warm blankets &amp; laughter</small></span><span class="dd-check">✦</span></button>
-                    <button type="button" class="frost-dd-option" data-val="Moonlit Evening Stroll 🌙" data-icon="🌙" data-title="Moonlit Evening Stroll"><span class="dd-opt-icon">🌙</span><span class="dd-opt-body"><strong>Moonlit Evening Stroll</strong><small>Hand-in-hand under stars</small></span><span class="dd-check">✦</span></button>
-                    <button type="button" class="frost-dd-option" data-val="Future Finland Glass Igloo 🇫🇮" data-icon="🇫🇮" data-title="Finland Glass Igloo"><span class="dd-opt-icon">🇫🇮</span><span class="dd-opt-body"><strong>Finland Glass Igloo</strong><small>Beneath the Northern Lights</small></span><span class="dd-check">✦</span></button>
-                    <button type="button" class="frost-dd-option" data-val="Festive Lights Walk ✨" data-icon="✨" data-title="Festive Lights Walk"><span class="dd-opt-icon">✨</span><span class="dd-opt-body"><strong>Festive Lights Walk</strong><small>Glowing streets &amp; smiles</small></span><span class="dd-check">✦</span></button>
+                    <button type="button" class="frost-dd-option selected" data-val="Cozy Winter Evening ❄️" data-icon="❄️" data-title="Cozy Winter Evening"><span class="dd-opt-icon">❄️</span><span class="dd-opt-body"><strong>Cozy Winter Evening</strong><small>Warm blankets &amp; talks</small></span><span class="dd-check">✦</span></button>
+                    <button type="button" class="frost-dd-option" data-val="Candlelight Cafe Date ✨" data-icon="✨" data-title="Candlelight Cafe Date"><span class="dd-opt-icon">✨</span><span class="dd-opt-body"><strong>Candlelight Cafe Date</strong><small>Soft lights &amp; smiles</small></span><span class="dd-check">✦</span></button>
+                    <button type="button" class="frost-dd-option" data-val="Finland Glass Igloo 🇫🇮" data-icon="🇫🇮" data-title="Finland Glass Igloo"><span class="dd-opt-icon">🇫🇮</span><span class="dd-opt-body"><strong>Finland Glass Igloo</strong><small>Under Northern Lights</small></span><span class="dd-check">✦</span></button>
+                    <button type="button" class="frost-dd-option" data-val="Moonlit Evening Walk 🌙" data-icon="🌙" data-title="Moonlit Evening Walk"><span class="dd-opt-icon">🌙</span><span class="dd-opt-body"><strong>Moonlit Evening Walk</strong><small>Hand-in-hand forever</small></span><span class="dd-check">✦</span></button>
                   </div>
                 </div>
 
-                <button type="button" id="mintTicketBtn" class="send-frost-btn sheen-hover">✨ Mint Pass</button>
+                <button type="button" id="mintTicketBtn" class="primary-pill-btn">✨ Stamp &amp; Claim Pass</button>
               </div>
               <div id="mintedTicketCard" class="golden-frost-ticket"></div>
             </div>
 
-            <!-- ACTIVITY 10 -->
-            <div id="act-panel-10" class="act-panel frost-card">
+            <!-- GAME 10: FLOATING CRYSTAL BUBBLE POP + BURST -->
+            <div id="act-panel-10" class="act-panel surface-card furnished-game-card">
               <div class="act-panel-head">
                 <div>
-                  <h3>🫧 Pop the Floating Frost Bubbles</h3>
-                  <p>Tap the drifting crystal bubbles — every pop releases sparkles and a brand-new sweet compliment!</p>
+                  <h3>🫧 Whisper Bubble Symphony</h3>
+                  <p>Pop floating snow &amp; rose bubbles to unlock sweet compliments — tap anywhere in the sky or launch a Bubble Shower!</p>
                 </div>
-                <span id="bubblePopBadge" class="score-pill">Popped: 0 🫧</span>
+                <div class="act-score-bar">
+                  <span id="bubblePopBadge" class="score-pill">Popped: 0 🫧</span>
+                  <button type="button" id="bubbleShowerBtn" class="primary-pill-btn">🫧 Spawn Bubble Shower</button>
+                </div>
               </div>
               <div id="bubbleArena" class="bubble-arena"></div>
-              <div id="bubbleWhisperText" class="act-reward-note">Pop a floating frost bubble above to reveal a sweet note! 🫧💖</div>
+              <div id="bubbleWhisperText" class="act-reward-note">Tap any drifting crystal bubble above to pop a sweet note! 🫧💖</div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ==================== VIEW 5: 102 PICTURES & 10 PLAYABLE VIDEOS ==================== -->
-      <section id="view-gallery" class="view-section" aria-label="102 Pictures and 10 Videos">
+      <!-- ==================== VIEW 5: 120 PICTURES & 10 VIDEOS ==================== -->
+      <section id="view-gallery" class="view-section" aria-label="120 Pictures and 10 Videos">
         <div class="page-scroll smooth-scroll-pane">
-          <div class="section-hero">
-            <span class="frost-eyebrow">🎬 102 Pictures &amp; 10 Playable Videos</span>
-            <h2 class="section-title">Frosted Treasury of Memories</h2>
-            <p class="section-desc">Every radiant smile, festive glow, candid moment, and romantic reel preserved in crystal glass.</p>
+          <div class="section-hero furnished-hero anim-stagger">
+            <span class="frost-eyebrow">🎬❄️ 120 Cherished Pictures (Including Us Together!) &amp; 10 Romantic Videos</span>
+            <h2 class="section-title">Treasury of Our Memories</h2>
+            <p class="section-desc">Every portrait, our 18 couple photos together, and 10 romantic reels with progressive frosted reveal and single-play cinema controls.</p>
+            <div class="hero-stat-ribbon">
+              <span>💑 18 Couple Photos of Us</span>
+              <span>🌸 102 Solo &amp; Story Memories</span>
+              <span>🎬 10 Single-Play Romantic Reels</span>
+            </div>
           </div>
 
-          <div class="cinema-section frost-card">
+          <div class="cinema-section surface-card anim-stagger">
             <div class="cinema-header">
               <div>
-                <span class="mini-frost-tag">🎞️ Romantic Video Theater</span>
-                <h3 id="activeVideoTitle" class="cinema-title">Reel 01 — Forever in Motion</h3>
+                <span class="mini-frost-tag">🎞️ Romantic Video Theater • Loading Veil &amp; Single-Play</span>
+                <h3 id="activeVideoTitle" class="cinema-title">Reel 01 — Oceanfront Dream Villa Together</h3>
+                <p id="activeVideoDesc" class="cinema-subdesc">Standing hand-in-hand overlooking the sea — our dream horizon in motion.</p>
               </div>
-              <div class="cinema-counter" id="videoCounterBadge">Video 1 of 10</div>
+              <div class="cinema-header-controls">
+                <span class="cinema-counter" id="videoCounterBadge">Reel 1 / 10</span>
+                <button type="button" id="prevVideoBtn" class="ghost-pill-btn">‹ Prev</button>
+                <button type="button" id="playPauseVideoBtn" class="primary-pill-btn">▶ Play Once</button>
+                <button type="button" id="nextVideoBtn" class="ghost-pill-btn">Next ›</button>
+              </div>
             </div>
 
-            <div class="cinema-layout">
-              <div class="cinema-player-wrap">
-                <video id="mainVideoPlayer" class="main-video-player" src="videos/vid-01.mp4" controls playsinline preload="metadata"></video>
-                <div class="cinema-quick-bar">
-                  <button type="button" id="prevVideoBtn" class="frosted-pill-btn">‹ Prev Reel</button>
-                  <button type="button" id="playPauseVideoBtn" class="frosted-pill-btn accent-frost-btn">▶ Play / Pause</button>
-                  <button type="button" id="nextVideoBtn" class="frosted-pill-btn">Next Reel ›</button>
-                </div>
+            <div id="cinemaStageWrap" class="cinema-stage-clean media-veil-container">
+              <div id="cinemaLoadingOverlay" class="media-loading-overlay" hidden>
+                <div class="veil-spinner"></div>
+                <span>⏳ Loading romantic video reel...</span>
               </div>
-              <div id="videoPlaylist" class="video-playlist smooth-scroll-pane" aria-label="10 Romantic Videos"></div>
+              <video
+                id="mainVideoPlayer"
+                class="main-video-player"
+                src="videos/vid-01.mp4"
+                poster="images/video-thumbs/vid-01.jpg"
+                controls
+                playsinline
+                preload="metadata"
+              ></video>
             </div>
+
+            <!-- Sleek Visual Poster Filmstrip -->
+            <div id="videoFilmstrip" class="video-filmstrip" aria-label="Choose a video reel"></div>
           </div>
 
-          <div class="carousel-showcase">
+          <!-- Featured Couple & Portrait Carousel -->
+          <div class="carousel-showcase anim-stagger">
             <button id="carouselPrevBtn" class="carousel-nav prev" type="button" aria-label="Previous picture">‹</button>
             <div class="carousel-stage">
-              <img id="carouselPrevImg" class="carousel-side-img left" src="images/thumbs/pic-015.jpg" alt="" aria-hidden="true" />
-              <figure class="carousel-main-card frost-card">
-                <img id="carouselMainImg" src="images/pic-001.jpg" alt="Cherished portrait" />
+              <img id="carouselPrevImg" class="carousel-side-img left" src="images/thumbs/pic-103.jpg" alt="" aria-hidden="true" />
+              <figure id="carouselMainFigure" class="carousel-main-card surface-card media-veil-container">
+                <img id="carouselMainImg" src="images/pic-110.jpg" alt="Cherished memory" />
                 <figcaption class="carousel-caption-bar">
                   <div>
-                    <div id="carouselTitle" class="carousel-title">Morning Sunshine</div>
-                    <div id="carouselQuote" class="carousel-quote">A smile that melts every winter frost ❤️</div>
+                    <div id="carouselTitle" class="carousel-title">Wrapped in Warmth Together</div>
+                    <div id="carouselQuote" class="carousel-quote">Resting side-by-side under warm lights — my safest place on earth ❤️</div>
                   </div>
-                  <button id="carouselAutoBtn" class="frosted-pill-btn" type="button" aria-pressed="true">⏸ Auto</button>
+                  <button id="carouselAutoBtn" class="ghost-pill-btn" type="button" aria-pressed="true">⏸ Auto</button>
                 </figcaption>
               </figure>
-              <img id="carouselNextImg" class="carousel-side-img right" src="images/thumbs/pic-002.jpg" alt="" aria-hidden="true" />
+              <img id="carouselNextImg" class="carousel-side-img right" src="images/thumbs/pic-001.jpg" alt="" aria-hidden="true" />
             </div>
             <button id="carouselNextBtn" class="carousel-nav next" type="button" aria-label="Next picture">›</button>
           </div>
 
-          <div class="gallery-toolbar">
-            <h3 class="subsection-title">❄️ Complete Collection (<span id="galleryCountLabel">112</span> Items)</h3>
+          <div class="gallery-toolbar surface-card furnished-toolbar anim-stagger">
+            <h3 class="subsection-title" style="margin:0;">❄️ Memory Archive (<span id="galleryCountLabel">130</span> Items)</h3>
             <div id="galleryFilters" class="filter-pills">
-              <button class="filter-pill active" data-filter="all" type="button">All (112)</button>
-              <button class="filter-pill" data-filter="photos" type="button">Pictures (102)</button>
-              <button class="filter-pill" data-filter="videos" type="button">Videos (10)</button>
-              <button class="filter-pill" data-filter="portraits" type="button">Portraits (15)</button>
+              <button class="filter-pill active" data-filter="all" type="button">All (130)</button>
+              <button class="filter-pill" data-filter="couple" type="button">💑 Both of Us (18)</button>
+              <button class="filter-pill" data-filter="videos" type="button">🎬 Videos (10)</button>
+              <button class="filter-pill" data-filter="portraits" type="button">🌸 Portraits (15)</button>
+              <button class="filter-pill" data-filter="photos" type="button">📸 All Photos (120)</button>
             </div>
           </div>
 
-          <div id="galleryGrid" class="gallery-grid"></div>
+          <div id="galleryGrid" class="gallery-grid anim-stagger"></div>
         </div>
       </section>
 
       <!-- ==================== VIEW 6: SNOW, FINLAND & ALL HER LOVED THINGS ==================== -->
-      <section id="view-favorites" class="view-section" aria-label="Loved Things and Snowy Finland">
+      <section id="view-favorites" class="view-section" aria-label="Snow, Finland and Loved Things">
         <div class="page-scroll smooth-scroll-pane">
-          <div class="section-hero">
-            <span class="frost-eyebrow">❄️💕 Wrapped in Frost &amp; Joy</span>
-            <h2 class="section-title">Every Little Thing Made of Happiness</h2>
-            <p class="section-desc">From steaming plates of momos to snowy skies in Finland — every favorite joy celebrated in crystal frost.</p>
+          <div class="section-hero furnished-hero anim-stagger">
+            <span class="frost-eyebrow">❄️🇫🇮 Arctic Wonder &amp; Sweetest Joys</span>
+            <h2 class="section-title">Snow, Finland &amp; Everything She Loves</h2>
+            <p class="section-desc">Explore our interactive Lapland winter dream itinerary and build a cozy date tray filled with every favorite treat.</p>
+            <div class="hero-stat-ribbon">
+              <span>🇫🇮 Rovaniemi Glass Igloo</span>
+              <span>🌌 Aurora Borealis</span>
+              <span>🥟 MOMO • 🍨 Ice Cream • 🍫 KitKat • 🌶️ Kurkure • 🥔 Chips</span>
+            </div>
           </div>
 
-          <div class="finland-frost-hero frost-card sheen-hover">
-            <div class="finland-aurora-glow" aria-hidden="true"></div>
-            <div class="finland-hero-body">
-              <span class="finland-badge">🇫🇮 Ultimate Dream Destination • Finland</span>
-              <h3>Hand-in-Hand Under Finland's Snowy Aurora</h3>
-              <p>
-                A quiet winter fairytale waiting to come true — watching pastel emerald and rose Northern Lights ripple
-                above a warm glass igloo in snowy Lapland, walking through powdery white snow in Rovaniemi, and sharing
-                hot cocoa while snowflakes sparkle in the winter air.
-              </p>
-              <div class="finland-pills">
-                <span>❄️ Lapland Glass Igloo</span>
-                <span>🌌 Aurora Borealis</span>
-                <span>🦌 Snowy Sleigh Ride</span>
-                <span>☕ Warm Helsinki Cocoa</span>
-                <span>🧣 Endless Winter Hugs</span>
+          <!-- Interactive Finland Dream Experience -->
+          <div class="finland-showcase surface-card anim-stagger">
+            <div class="finland-grid-layout">
+              <div class="finland-copy-col">
+                <span class="finland-badge">🇫🇮 Dream Destination • Finnish Lapland</span>
+                <h3>Under the Dancing Skies of Snowy Finland</h3>
+                <p>
+                  Far north where silent pine forests wear blankets of powdery snow, our dream trip awaits: waking up inside a heated
+                  glass igloo in Rovaniemi, watching emerald and rose ribbons of the Aurora Borealis shimmer across the midnight sky,
+                  riding through snowy trails wrapped in warm scarves, and holding hands over steaming mugs of cocoa.
+                </p>
+
+                <div id="finlandSpotTabs" class="finland-spot-tabs">
+                  <button type="button" class="filter-pill active" data-spot="0">🛖 Glass Igloo Night</button>
+                  <button type="button" class="filter-pill" data-spot="1">🌌 Aurora Midnight</button>
+                  <button type="button" class="filter-pill" data-spot="2">🦌 Rovaniemi Snow Ride</button>
+                  <button type="button" class="filter-pill" data-spot="3">☕ Helsinki Fireside</button>
+                </div>
+
+                <div id="finlandSpotDetail" class="finland-spot-detail"></div>
+              </div>
+
+              <div class="finland-visual-col">
+                <div class="finland-poster-frame media-veil-container">
+                  <img id="finlandPreviewImg" src="images/video-thumbs/vid-08.jpg" alt="Snowy winter fairytale" />
+                  <div class="finland-weather-chip">❄️ -8°C • Fresh Powder Snow • 100% Warmth Together</div>
+                </div>
               </div>
             </div>
           </div>
 
-          <h3 class="subsection-title">🥟 Favorite Cravings &amp; Sweet Treats</h3>
-          <div class="foods-grid">
-            <article class="food-card frost-card sheen-hover">
-              <div class="food-icon-orb">🥟</div>
-              <h4>Steaming MOMO</h4>
-              <p>Soft, piping-hot dumplings paired with spicy red chutney — instant pure joy on every cozy evening date.</p>
-              <span class="food-love-tag">❤️ Forever Craving #1</span>
-            </article>
-            <article class="food-card frost-card sheen-hover">
-              <div class="food-icon-orb">🍨</div>
-              <h4>Creamy Ice Cream</h4>
-              <p>Frosty, velvety scoops of sweetness — even in chilly winter weather, ice cream always wins!</p>
-              <span class="food-love-tag">❄️ Frosty Delight</span>
-            </article>
-            <article class="food-card frost-card sheen-hover">
-              <div class="food-icon-orb">🍫</div>
-              <h4>Crispy KitKat</h4>
-              <p>Snap a chocolate wafer in two — though both halves rightfully belong to the Queen of Arunava's heart!</p>
-              <span class="food-love-tag">✨ Sweet Chocolate Break</span>
-            </article>
-            <article class="food-card frost-card sheen-hover">
-              <div class="food-icon-orb">🌶️</div>
-              <h4>Tangy Kurkure</h4>
-              <p>Chatpata, crunchy, playful spice that makes every movie night, travel ride, and late chat ten times livelier.</p>
-              <span class="food-love-tag">🔥 Crunchy Favourite</span>
-            </article>
-            <article class="food-card frost-card sheen-hover">
-              <div class="food-icon-orb">🥔</div>
-              <h4>Golden Chips</h4>
-              <p>Light, crispy, irresistible bites — simple little moments turned into unforgettable memories together.</p>
-              <span class="food-love-tag">🌸 Everyday Joy</span>
-            </article>
+          <div class="craving-tray-header anim-stagger">
+            <div>
+              <h3 class="subsection-title" style="margin:0;">🥟 Interactive Craving Platter</h3>
+              <p class="muted-note">Tap any favorite treat card below to serve it onto your cozy date tray with Arunava!</p>
+            </div>
+            <div id="dateTrayCounter" class="score-pill">Date Tray: 0 Treats Served ✨</div>
           </div>
+
+          <div id="cravingTrayBar" class="craving-tray-bar surface-card anim-stagger">
+            <span class="tray-empty-hint">🍽️ Tap “Serve Treat” on any favorite below to fill your cozy evening platter!</span>
+          </div>
+
+          <div id="foodsGrid" class="foods-grid anim-stagger"></div>
         </div>
       </section>
 
-      <!-- ==================== VIEW 7: LOVE STORY TIMELINE ==================== -->
-      <section id="view-timeline" class="view-section" aria-label="Love Story Timeline">
+      <!-- ==================== VIEW 7: EXPANDED LOVE STORY TIMELINE ==================== -->
+      <section id="view-timeline" class="view-section" aria-label="Our Love Timeline">
         <div class="page-scroll smooth-scroll-pane">
-          <div class="section-hero">
-            <span class="frost-eyebrow">🕰️ Etched in Crystal &amp; Time</span>
-            <h2 class="section-title">Our Sacred Chapters Together</h2>
-            <p class="section-desc">Six unforgettable milestones where destiny wove two hearts and two families into one story.</p>
+          <div class="section-hero furnished-hero anim-stagger">
+            <span class="frost-eyebrow">🕰️❄️ Six Sacred Chapters Written in Destiny</span>
+            <h2 class="section-title">Our Love Story Timeline</h2>
+            <p class="section-desc">From one unforgettable October message to two families uniting in joy — every chapter told in full.</p>
+            <div class="hero-stat-ribbon">
+              <span>💬 16 Oct 2025</span>
+              <span>💍 25 Oct 2025</span>
+              <span>🌹 24 Feb 2026</span>
+              <span>🌸 07 Apr &amp; 19 Apr 2026</span>
+              <span>👑 03 Jul 2026</span>
+            </div>
           </div>
 
-          <div class="live-counters-grid">
-            <div class="counter-card frost-card sheen-hover">
-              <div class="counter-label">💬 Since Our Very First Chat (16 Oct 2025)</div>
+          <div class="live-counters-grid anim-stagger">
+            <div class="counter-card surface-card">
+              <div class="counter-label">💬 Since Our Very First Chat (16 October 2025)</div>
               <div id="sinceFirstChatClock" class="counter-digits">--d : --h : --m : --s</div>
-              <div class="counter-sub">Where a single hello turned into forever.</div>
+              <div class="counter-sub">Every second since a simple hello changed two lives forever.</div>
             </div>
-            <div class="counter-card frost-card highlight-frost-card sheen-hover">
-              <div class="counter-label">💍 Together Since Acceptance (25 Oct 2025)</div>
+            <div class="counter-card surface-card highlight-frost-card">
+              <div class="counter-label">💍 Together Since Acceptance (25 October 2025)</div>
               <div id="sinceAcceptanceClock" class="counter-digits">--d : --h : --m : --s</div>
-              <div id="nextMilestoneNote" class="counter-sub">Counting every precious heartbeat ❤️</div>
+              <div class="counter-sub">Two hearts walking one path in trust, peace, and devotion ❤️</div>
             </div>
           </div>
 
-          <div id="timelineTrack" class="timeline-track"></div>
+          <div id="timelineTrack" class="timeline-track anim-stagger"></div>
         </div>
       </section>
 
-      <!-- ==================== VIEW 8: REDESIGNED BIOMETRIC LIQUID-HEART LOVE METER & LETTER ==================== -->
-      <section id="view-lovelab" class="view-section" aria-label="Biometric Soulmate Analyzer and Sealed Letter">
+      <!-- ==================== VIEW 8: INTERACTIVE BIOMETRIC HEARTBEAT SCAN & LOVE LETTER ==================== -->
+      <section id="view-lovelab" class="view-section" aria-label="Interactive Biometric Heart Sync and Letter">
         <div class="page-scroll smooth-scroll-pane">
-          <div class="section-hero">
-            <span class="frost-eyebrow">💘🔬 Biometric Heartbeat &amp; Soul Resonance</span>
-            <h2 class="section-title">Soulmate Resonance Lab &amp; Letter</h2>
-            <p class="section-desc">Synchronize two heartbeats, watch the liquid-crystal heart surge, and read Arunava's forever letter.</p>
+          <div class="section-hero furnished-hero anim-stagger">
+            <span class="frost-eyebrow">💓❄️ Interactive Couple Biometrics &amp; Forever Letter</span>
+            <h2 class="section-title">Interactive Heartbeat Sync &amp; Letter</h2>
+            <p class="section-desc">Place your finger on the pulse sensor, tap in rhythm with Arunava's heartbeat, and unlock your live soulmate resonance.</p>
+            <div class="hero-stat-ribbon">
+              <span>💓 Live Touch Pulse Sensor</span>
+              <span>🔬 Twin-ECG Phase Lock</span>
+              <span>💌 Sealed Forever Letter</span>
+            </div>
           </div>
 
-          <!-- REDESIGNED LUXURY BIOMETRIC LIQUID-HEART & ECG LOVE METER -->
-          <div class="biometric-love-sanctuary frost-card">
+          <div class="biometric-love-sanctuary surface-card anim-stagger">
             <div class="bio-top-row">
               <div class="bio-person-card">
                 <span class="bio-avatar-ring">🤴</span>
                 <label for="loverOneInput" class="sr-only">First soul</label>
                 <input id="loverOneInput" type="text" value="Arunava" />
-                <small>Devoted Heart • 72 BPM</small>
+                <small id="bioArunavaBpm">Steady Devotion • 72 BPM</small>
               </div>
 
-              <!-- Central Liquid-Fill SVG Crystal Heart + Circular Harmonic Gauge -->
               <div class="liquid-heart-gauge-stage">
                 <svg class="harmonic-ring-svg" viewBox="0 0 220 220">
                   <defs>
                     <linearGradient id="ringArcGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stop-color="#ff4d8d" />
-                      <stop offset="50%" stop-color="#a855f7" />
+                      <stop offset="0%" stop-color="#e11d68" />
+                      <stop offset="50%" stop-color="#8b5cf6" />
                       <stop offset="100%" stop-color="#38bdf8" />
                     </linearGradient>
                     <clipPath id="heartVesselClip">
@@ -765,13 +804,11 @@
                     </clipPath>
                     <linearGradient id="liquidRoseGrad" x1="0%" y1="0%" x2="0%" y2="100%">
                       <stop offset="0%" stop-color="#ff6ca3" />
-                      <stop offset="55%" stop-color="#eb3678" />
+                      <stop offset="55%" stop-color="#e11d68" />
                       <stop offset="100%" stop-color="#7e22ce" />
                     </linearGradient>
                   </defs>
-
-                  <!-- Outer Track & Animated Progress Ring -->
-                  <circle cx="110" cy="110" r="98" fill="none" stroke="rgba(235,54,120,0.12)" stroke-width="8" />
+                  <circle cx="110" cy="110" r="98" fill="none" stroke="rgba(225,29,104,0.1)" stroke-width="8" />
                   <circle
                     id="bioRingArc"
                     cx="110"
@@ -782,27 +819,21 @@
                     stroke-width="8"
                     stroke-linecap="round"
                     stroke-dasharray="615.75"
-                    stroke-dashoffset="0"
+                    stroke-dashoffset="420"
                     transform="rotate(-90 110 110)"
                   />
-
-                  <!-- Glass Heart Vessel Background -->
                   <path
                     d="M110 176 C110 176 46 132 46 84 C46 58 66 42 88 42 C101 42 107 50 110 57 C113 50 119 42 132 42 C154 42 174 58 174 84 C174 132 110 176 110 176 Z"
-                    fill="rgba(255,230,242,0.55)"
+                    fill="rgba(255,235,244,0.6)"
                     stroke="#ffffff"
                     stroke-width="3"
                   />
-
-                  <!-- Rising Animated Sloshing Liquid Inside Clipped Heart -->
                   <g clip-path="url(#heartVesselClip)">
-                    <path id="liquidWaveBack" fill="rgba(168,85,247,0.55)" d="" />
+                    <path id="liquidWaveBack" fill="rgba(139,92,246,0.45)" d="" />
                     <path id="liquidWaveFront" fill="url(#liquidRoseGrad)" d="" />
                   </g>
-
-                  <!-- Center Score Readout -->
-                  <text id="bioCenterPercent" x="110" y="106" text-anchor="middle" class="bio-svg-score">∞%</text>
-                  <text id="bioCenterSub" x="110" y="126" text-anchor="middle" class="bio-svg-sub">SOULMATES</text>
+                  <text id="bioCenterPercent" x="110" y="106" text-anchor="middle" class="bio-svg-score">READY</text>
+                  <text id="bioCenterSub" x="110" y="126" text-anchor="middle" class="bio-svg-sub">TOUCH SENSOR</text>
                 </svg>
               </div>
 
@@ -810,56 +841,83 @@
                 <span class="bio-avatar-ring">👑</span>
                 <label for="loverTwoInput" class="sr-only">Second soul</label>
                 <input id="loverTwoInput" type="text" value="My Beloved Queen" />
-                <small>Eternal Queen • Synced BPM</small>
+                <small id="bioHerBpm">Awaiting Touch • -- BPM</small>
               </div>
             </div>
 
-            <!-- Live Dual-ECG Heartbeat Harmonics Oscilloscope -->
+            <div id="bioInteractiveDeck" class="bio-interactive-deck">
+              <div class="bio-step-pills">
+                <span id="bioStepPill1" class="bio-step-pill active">1. Hold Thumbprint Sensor</span>
+                <span id="bioStepPill2" class="bio-step-pill">2. Tap 4 Heartbeat Pulses</span>
+                <span id="bioStepPill3" class="bio-step-pill">3. Choose Heart Memory</span>
+              </div>
+
+              <div id="bioStage1" class="bio-stage-box">
+                <button type="button" id="bioHoldPadBtn" class="bio-fingerprint-pad" aria-label="Press and hold finger sensor">
+                  <span class="bio-pad-ring"></span>
+                  <span class="bio-pad-icon">💓</span>
+                  <span id="bioHoldPctText" class="bio-pad-label">Press &amp; Hold Here (0%)</span>
+                </button>
+                <p class="bio-stage-hint">Hold your finger or mouse down on the glowing heart sensor for 2 seconds so Arunava's scanner can feel your pulse!</p>
+              </div>
+
+              <div id="bioStage2" class="bio-stage-box" hidden>
+                <button type="button" id="bioRhythmTapBtn" class="bio-rhythm-btn">
+                  💓 Tap Beat (<span id="bioTapCount">0</span> / 4)
+                </button>
+                <p class="bio-stage-hint">Tap 4 times to synchronize your heartbeat wave directly with Arunava's pulse!</p>
+              </div>
+
+              <div id="bioStage3" class="bio-stage-box" hidden>
+                <p class="bio-stage-hint" style="font-weight:600;color:var(--ink-deep);">Final Step: Which moment makes your heart beat warmest?</p>
+                <div class="bio-choice-grid">
+                  <button type="button" class="ghost-pill-btn bio-memory-choice" data-choice="Seeing each other on our First Meet 🌹">🌹 Our First Meet Smile</button>
+                  <button type="button" class="ghost-pill-btn bio-memory-choice" data-choice="Sharing piping-hot MOMOs &amp; laughter 🥟">🥟 Cozy MOMO Evening</button>
+                  <button type="button" class="ghost-pill-btn bio-memory-choice" data-choice="Watching Finland's snowy Aurora together 🇫🇮">🇫🇮 Snowy Finland Dream</button>
+                  <button type="button" class="ghost-pill-btn bio-memory-choice" data-choice="Holding hands for a lifetime together 💍">💍 Holding Hands Forever</button>
+                </div>
+              </div>
+
+              <div id="bioStageDone" class="bio-stage-box" hidden>
+                <p id="loveMeterVerdict" class="bio-verdict-text"></p>
+                <button type="button" id="bioResetScanBtn" class="ghost-pill-btn">🔄 Run Interactive Heart Scan Again</button>
+              </div>
+            </div>
+
             <div class="bio-ecg-wrap">
               <div class="bio-ecg-header">
-                <span>💓 Live Twin-Heartbeat ECG Resonance</span>
-                <span id="bioSyncStatus" class="score-pill">100% Phase-Locked Harmony ✨</span>
+                <span>💓 Live Twin-Heartbeat ECG Oscilloscope</span>
+                <span id="bioSyncStatus" class="score-pill">Waiting for Finger Touch...</span>
               </div>
-              <canvas id="bioEcgCanvas" width="760" height="100" class="bio-ecg-canvas"></canvas>
+              <canvas id="bioEcgCanvas" width="760" height="96" class="bio-ecg-canvas"></canvas>
             </div>
 
-            <!-- 5 Animated Soulmate Resonance Pillars -->
             <div id="bioPillarsGrid" class="bio-pillars-grid">
               <div class="bio-pillar">
-                <div class="pillar-top"><span>💖 Emotional Trust &amp; Safe Haven</span><strong data-pval="0">100%</strong></div>
-                <div class="pillar-bar"><div data-pbar="0" style="width:100%"></div></div>
+                <div class="pillar-top"><span>💖 Emotional Safety &amp; Trust</span><strong data-pval="0">--</strong></div>
+                <div class="pillar-bar"><div data-pbar="0" style="width:20%"></div></div>
               </div>
               <div class="bio-pillar">
-                <div class="pillar-top"><span>😊 Smile &amp; Laughter Chemistry</span><strong data-pval="1">100%</strong></div>
-                <div class="pillar-bar"><div data-pbar="1" style="width:100%"></div></div>
+                <div class="pillar-top"><span>😊 Smile &amp; Laughter Sync</span><strong data-pval="1">--</strong></div>
+                <div class="pillar-bar"><div data-pbar="1" style="width:20%"></div></div>
               </div>
               <div class="bio-pillar">
-                <div class="pillar-top"><span>🥟 MOMO &amp; Sweet Cravings Sync</span><strong data-pval="2">100%</strong></div>
-                <div class="pillar-bar"><div data-pbar="2" style="width:100%"></div></div>
+                <div class="pillar-top"><span>🥟 MOMO &amp; Sweet Cravings</span><strong data-pval="2">--</strong></div>
+                <div class="pillar-bar"><div data-pbar="2" style="width:20%"></div></div>
               </div>
               <div class="bio-pillar">
-                <div class="pillar-top"><span>❄️ Snowy Finland Dream Vision</span><strong data-pval="3">100%</strong></div>
-                <div class="pillar-bar"><div data-pbar="3" style="width:100%"></div></div>
+                <div class="pillar-top"><span>❄️ Snowy Finland Vision</span><strong data-pval="3">--</strong></div>
+                <div class="pillar-bar"><div data-pbar="3" style="width:20%"></div></div>
               </div>
               <div class="bio-pillar">
-                <div class="pillar-top"><span>💍 Forever Destiny &amp; Family Bond</span><strong data-pval="4">∞%</strong></div>
-                <div class="pillar-bar"><div data-pbar="4" style="width:100%"></div></div>
+                <div class="pillar-top"><span>💍 Forever Family &amp; Destiny</span><strong data-pval="4">--</strong></div>
+                <div class="pillar-bar"><div data-pbar="4" style="width:20%"></div></div>
               </div>
-            </div>
-
-            <div class="bio-action-footer">
-              <button id="calcLoveBtn" type="button" class="send-frost-btn large-cta-btn sheen-hover">
-                💓 Run Deep Biometric Heartbeat Scan
-              </button>
-              <p id="loveMeterVerdict" class="bio-verdict-text">
-                Cosmic Verdict: Written across winter stars since 16 October 2025 — two heartbeats locked in 1000% eternal harmony! ❤️❄️
-              </p>
             </div>
           </div>
 
-          <!-- Whispers Quote Studio + Sealed Letter -->
-          <div class="lovelab-bottom-stack">
-            <div class="lab-card frost-card">
+          <div class="lovelab-bottom-stack anim-stagger">
+            <div class="lab-card surface-card">
               <div class="lab-card-header">
                 <span class="lab-icon">🌹</span>
                 <h3>Whispers in the Snow</h3>
@@ -867,17 +925,15 @@
               <blockquote id="generatedQuoteText" class="quote-display">
                 “More than stars in the winter sky and waves in the ocean, every single heartbeat belongs to you ❤️”
               </blockquote>
-              <div id="generatedQuoteTag" class="quote-author">— Arunava's Heart</div>
+              <div id="generatedQuoteTag" class="quote-author">— Arunava</div>
               <div class="lab-btn-row">
-                <button id="newQuoteBtn" type="button" class="frosted-pill-btn accent-frost-btn sheen-hover">✨ Next Whisper</button>
-                <button id="copyQuoteBtn" type="button" class="frosted-pill-btn sheen-hover">📋 Copy</button>
-                <button id="speakQuoteBtn" type="button" class="frosted-pill-btn sheen-hover">🔊 Listen</button>
+                <button id="newQuoteBtn" type="button" class="primary-pill-btn">✨ Next Whisper</button>
               </div>
             </div>
 
-            <article class="love-letter-showcase frost-card">
+            <article class="love-letter-showcase surface-card">
               <div class="wax-seal" aria-hidden="true">❤️</div>
-              <div class="letter-top-meta">❄️ Sealed in Frost &amp; Forever Devotion</div>
+              <div class="letter-top-meta">❄️ Handwritten from Arunava's Heart</div>
               <div class="letter-body">
                 <p id="letterSalutation" class="letter-salutation">My Dearest Love,</p>
                 <p>
@@ -889,9 +945,6 @@
                 </p>
                 <p class="letter-signoff">Forever Yours,<br /><strong>Arunava ❤️</strong></p>
               </div>
-              <div class="letter-actions">
-                <button id="readLetterBtn" type="button" class="frosted-pill-btn sheen-hover">🔊 Read Letter Aloud</button>
-              </div>
             </article>
           </div>
         </div>
@@ -899,12 +952,16 @@
     </div>
   </div>
 
-  <!-- ==================== FROSTED CRYSTAL LIGHTBOX (FULL-RES PHOTOS + VIDEOS) ==================== -->
+  <!-- ==================== FROSTED CRYSTAL LIGHTBOX WITH PROGRESSIVE VEIL REVEAL ==================== -->
   <div id="lightboxModal" class="lightbox-modal" role="dialog" aria-modal="true" aria-label="Memory viewer" hidden>
     <button id="lightboxCloseBtn" type="button" class="lightbox-close" aria-label="Close viewer">✕</button>
     <button id="lightboxPrevBtn" type="button" class="lightbox-arrow prev" aria-label="Previous memory">‹</button>
-    <figure class="lightbox-figure frost-card">
-      <img id="lightboxImg" src="images/pic-001.jpg" alt="Cherished memory" />
+    <figure id="lightboxFigure" class="lightbox-figure surface-card media-veil-container">
+      <div id="lightboxLoadingOverlay" class="media-loading-overlay" hidden>
+        <div class="veil-spinner"></div>
+        <span id="lightboxLoadingText">⏳ Unblurring memory...</span>
+      </div>
+      <img id="lightboxImg" src="images/pic-110.jpg" alt="Cherished memory" />
       <video id="lightboxVideo" controls playsinline hidden></video>
       <figcaption id="lightboxCaption" class="lightbox-caption"></figcaption>
     </figure>
