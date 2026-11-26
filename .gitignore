@@ -1,5 +1,4 @@
-# Ignore raw source media dump so GitHub Pages repo stays clean and fast
+# Ignore raw source photo dump only (keep Audio/, images/, videos/, assets/ tracked for GitHub Pages!)
 Photos-1-001/
-Audio/
 .DS_Store
 Thumbs.db

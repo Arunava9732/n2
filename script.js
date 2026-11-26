@@ -313,8 +313,13 @@
     hydrate3DEmojis(overlay);
 
     if (posterUrl) videoEl.poster = posterUrl;
-    videoEl.src = srcUrl;
-    videoEl.load();
+    const videoCandidates = [
+      srcUrl,
+      srcUrl.replace(/^videos\//, "Videos/"),
+      "videos/vid-01.mp4",
+      "Videos/vid-01.mp4"
+    ].filter((v, idx, arr) => v && arr.indexOf(v) === idx);
+    let vidCandIdx = 0;
 
     let readyFired = false;
     const onVideoReady = () => {
@@ -332,59 +337,80 @@
       }, 420);
     };
 
+    videoEl.addEventListener("canplaythrough", onVideoReady, { once: true });
+    videoEl.addEventListener("canplay", onVideoReady, { once: true });
+    videoEl.addEventListener("loadeddata", onVideoReady, { once: true });
+    videoEl.addEventListener("error", () => {
+      vidCandIdx++;
+      if (vidCandIdx < videoCandidates.length) {
+        videoEl.src = videoCandidates[vidCandIdx];
+        videoEl.load();
+      } else {
+        overlay.innerHTML = `<span>⏳ Video buffering... tap Play below</span>`;
+      }
+    });
+
+    videoEl.src = videoCandidates[0];
+    videoEl.load();
     if (videoEl.readyState >= 3) {
       onVideoReady();
-    } else {
-      videoEl.addEventListener("canplaythrough", onVideoReady, { once: true });
-      videoEl.addEventListener("canplay", onVideoReady, { once: true });
-      videoEl.addEventListener("loadeddata", onVideoReady, { once: true });
-      videoEl.addEventListener("error", () => {
-        overlay.innerHTML = `<span>⏳ Video buffering... tap Play below</span>`;
-      }, { once: true });
     }
   }
 
-  // ==================== 4. 6 AUDIO TRACKS (WITH BACKUP FALLBACK) ====================
+  // ==================== 4. 6 AUDIO TRACKS (GITHUB PAGES CASE-SENSITIVE + MULTI-NAME READY!) ====================
+  // Supports "Audio/audio-01.mp3", "Audio/Audio 01.mp3", "audio/audio-01.mp3", and "audio/Audio 01.mp3" seamlessly!
+  function buildAudioCandidates(num, fallbackNum = "05") {
+    const cands = [
+      `Audio/audio-${num}.mp3`,
+      `Audio/Audio%20${num}.mp3`,
+      `audio/audio-${num}.mp3`,
+      `audio/Audio%20${num}.mp3`
+    ];
+    if (fallbackNum && fallbackNum !== num) {
+      cands.push(
+        `Audio/audio-${fallbackNum}.mp3`,
+        `Audio/Audio%20${fallbackNum}.mp3`,
+        `audio/audio-${fallbackNum}.mp3`,
+        `audio/Audio%20${fallbackNum}.mp3`
+      );
+    }
+    return cands;
+  }
+
   const AUDIO_TRACKS = {
     song1: {
       id: "audio-01",
-      src: "audio/audio-01.mp3",
-      fallback: "audio/audio-05.mp3",
+      candidates: buildAudioCandidates("01", "05"),
       title: "Melody 01 — A Special Song For You",
       subtitle: "Played exclusively from Arunava's heart"
     },
     song2: {
       id: "audio-02",
-      src: "audio/audio-02.mp3",
-      fallback: "audio/audio-05.mp3",
+      candidates: buildAudioCandidates("02", "05"),
       title: "Melody 02 — Second Serenade For My Queen",
       subtitle: "Another sweet melody chosen just for you"
     },
     loveDepth: {
       id: "audio-03",
-      src: "audio/audio-03.mp3",
-      fallback: "audio/audio-05.mp3",
+      candidates: buildAudioCandidates("03", "05"),
       title: "Heart Note 03 — How Deeply Arunava Loves You",
       subtitle: "More than words, stars, or ocean waves"
     },
     howWeMet: {
       id: "audio-04",
-      src: "audio/audio-04.mp3",
-      fallback: "audio/audio-05.mp3",
+      candidates: buildAudioCandidates("04", "05"),
       title: "Story Melody 04 — How Destiny Brought Us Together",
       subtitle: "From 16 October 2025 to our First Meet & forever"
     },
     backup1: {
       id: "audio-05",
-      src: "audio/audio-05.mp3",
-      fallback: "audio/audio-01.mp3",
+      candidates: buildAudioCandidates("05", "01"),
       title: "Encore Melody 05 — Secret Heartfelt Serenade",
       subtitle: "Special backup treasure from Arunava's collection"
     },
     backup2: {
       id: "audio-06",
-      src: "audio/audio-06.mp3",
-      fallback: "audio/audio-05.mp3",
+      candidates: buildAudioCandidates("06", "05"),
       title: "Encore Melody 06 — Eternal Promise",
       subtitle: "Protected by seamless backup audio"
     }
@@ -2143,10 +2169,10 @@
   }
 
   // Custom Audio Card:
-  // - Shows loading shimmer visual first ("⏳ Loading special melody...")
-  // - After complete loading, plays directly ONE TIME ONLY (loop = false)
-  // - Never repeats until user clicks Play button!
-  function buildRomanticAudioCard(trackMeta, autoStart = true) {
+  // - Resolves case-sensitive GitHub Pages paths ("Audio/audio-01.mp3", "Audio/Audio 01.mp3", "audio/...") automatically
+  // - Uses gesture-unlocked HTMLAudioElement so HTTPS autoplay works even after the 2s Thinking.... animation
+  // - Shows loading shimmer visual first, then plays directly ONE TIME ONLY (loop = false)
+  function buildRomanticAudioCard(trackMeta, autoStart = true, unlockedAudioEl = null) {
     const wrap = document.createElement("div");
     wrap.className = "chat-audio-card";
     wrap.innerHTML = `
@@ -2162,9 +2188,15 @@
         <div class="audio-progress-track"><div class="audio-progress-fill"></div></div>
         <span class="audio-time-lbl">0:00 / --:--</span>
       </div>
-      <audio preload="auto"></audio>
     `;
     hydrate3DEmojis(wrap);
+
+    const audioEl = unlockedAudioEl || document.createElement("audio");
+    audioEl.preload = "auto";
+    audioEl.playsInline = true;
+    audioEl.muted = false;
+    audioEl.loop = false;
+    wrap.appendChild(audioEl);
 
     const shimmerBar = wrap.querySelector(".audio-loading-shimmer-bar");
     const playBtn = wrap.querySelector(".audio-play-orb");
@@ -2172,13 +2204,16 @@
     const fillEl = wrap.querySelector(".audio-progress-fill");
     const trackEl = wrap.querySelector(".audio-progress-track");
     const timeEl = wrap.querySelector(".audio-time-lbl");
-    const audioEl = wrap.querySelector("audio");
 
     registerSinglePlayMedia(audioEl);
-    audioEl.loop = false;
 
-    let usedFallback = false;
+    const candidates = Array.isArray(trackMeta.candidates) && trackMeta.candidates.length
+      ? trackMeta.candidates
+      : [trackMeta.src, trackMeta.fallback].filter(Boolean);
+    let candIdx = 0;
+    let validSourceLocked = false;
     let initialLoadRevealDone = false;
+    let pendingManualPlay = false;
 
     const fmtSec = (sec) => {
       if (!Number.isFinite(sec) || sec < 0) return "--:--";
@@ -2194,53 +2229,63 @@
       hydrate3DEmojis(statusEl);
     };
 
-    const switchToBackupIfNeeded = () => {
-      if (!usedFallback && trackMeta.fallback && audioEl.src.indexOf(trackMeta.fallback) === -1) {
-        usedFallback = true;
-        setStatus("⏳ Loading backup melody from Arunava's collection...", true);
-        audioEl.src = trackMeta.fallback;
+    const tryNextCandidate = () => {
+      if (validSourceLocked) return;
+      candIdx++;
+      if (candIdx < candidates.length) {
+        setStatus("⏳ Loading special melody from Arunava's heart...", true);
+        audioEl.src = candidates[candIdx];
         audioEl.load();
       } else {
         playBtn.textContent = "▶";
-        setStatus("Tap ▶ to play this melody once", false);
+        setStatus("Tap ▶ to reload & play this melody", false);
       }
     };
 
     audioEl.addEventListener("loadedmetadata", () => {
       if (!Number.isFinite(audioEl.duration) || audioEl.duration < 0.25) {
-        switchToBackupIfNeeded();
+        tryNextCandidate();
         return;
       }
+      validSourceLocked = true;
       timeEl.textContent = `0:00 / ${fmtSec(audioEl.duration)}`;
     });
 
     // Item #11: First show loading visual, then after complete loading play directly ONE TIME ONLY!
     const handleCompleteLoading = () => {
-      if (initialLoadRevealDone) return;
+      if (initialLoadRevealDone && !pendingManualPlay) return;
       if (!Number.isFinite(audioEl.duration) || audioEl.duration < 0.25) return;
+      validSourceLocked = true;
+      const shouldPlayNow = pendingManualPlay || autoStart;
+      const delay = pendingManualPlay ? 0 : 420;
       initialLoadRevealDone = true;
+      pendingManualPlay = false;
+
       setTimeout(() => {
-        if (autoStart) {
+        if (shouldPlayNow) {
           pauseAllActiveMedia();
           audioEl.loop = false;
+          audioEl.muted = false;
           audioEl.play().then(() => {
             playBtn.textContent = "⏸";
             setStatus("🎵 Playing once from Arunava's heart ❤️", false);
           }).catch(() => {
             playBtn.textContent = "▶";
-            setStatus("✨ Audio loaded & ready — Tap ▶ to play once", false);
+            setStatus("✨ Melody ready — Tap ▶ to play once ❤️", false);
           });
         } else {
           playBtn.textContent = "▶";
-          setStatus("✨ Audio loaded — Tap ▶ to play once", false);
+          setStatus("✨ Melody ready — Tap ▶ to play once ❤️", false);
         }
-      }, 480);
+      }, delay);
     };
 
     audioEl.addEventListener("canplaythrough", handleCompleteLoading);
     audioEl.addEventListener("canplay", handleCompleteLoading);
+    audioEl.addEventListener("loadeddata", handleCompleteLoading);
 
     audioEl.addEventListener("playing", () => {
+      validSourceLocked = true;
       audioEl.loop = false;
       playBtn.textContent = "⏸";
       setStatus("🎵 Playing once from Arunava's heart ❤️", false);
@@ -2269,17 +2314,32 @@
     });
 
     audioEl.addEventListener("error", () => {
-      switchToBackupIfNeeded();
+      if (!validSourceLocked) {
+        tryNextCandidate();
+      } else {
+        playBtn.textContent = "▶";
+        setStatus("Tap ▶ to play this melody once", false);
+      }
     });
 
     playBtn.addEventListener("click", () => {
       initialLoadRevealDone = true;
+      if (!validSourceLocked || audioEl.error || !audioEl.currentSrc) {
+        candIdx = 0;
+        pendingManualPlay = true;
+        playBtn.textContent = "⏳";
+        setStatus("⏳ Loading special melody...", true);
+        audioEl.src = candidates[0];
+        audioEl.load();
+        return;
+      }
       if (audioEl.paused) {
         if (audioEl.ended) audioEl.currentTime = 0;
         pauseAllActiveMedia();
         audioEl.loop = false;
+        audioEl.muted = false;
         audioEl.play().catch(() => {
-          setStatus("Tap ▶ again to start audio", false);
+          setStatus("✨ Tap ▶ to start melody", false);
         });
       } else {
         audioEl.pause();
@@ -2294,7 +2354,7 @@
     });
 
     setStatus("⏳ Loading special melody from Arunava's heart...", true);
-    audioEl.src = trackMeta.src;
+    audioEl.src = candidates[0];
     audioEl.load();
 
     return wrap;
@@ -2524,10 +2584,34 @@
   }
 
   // Safe wrapper: a reply error can never freeze the chat (always releases the typing lock)
+  // Also pre-unlocks an HTMLAudioElement synchronously inside the user's click/submit gesture so HTTPS GitHub Pages autoplay works after the 2s Thinking.... delay!
   async function submitUserQuestion(rawText) {
     if (!rawText || !rawText.trim() || state.isTypingReply) return;
+    let preUnlockedAudio = null;
     try {
-      await submitUserQuestionInner(rawText);
+      const quickIntent = detectMediaIntent(normalizeAndSpellCheckQuery(rawText.trim()));
+      if (["play_song", "backup_audio", "love_depth", "how_we_met"].includes(quickIntent)) {
+        preUnlockedAudio = document.createElement("audio");
+        preUnlockedAudio.preload = "auto";
+        preUnlockedAudio.playsInline = true;
+        preUnlockedAudio.muted = true;
+        preUnlockedAudio.src = "data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA";
+        const p = preUnlockedAudio.play();
+        if (p && typeof p.then === "function") {
+          p.then(() => {
+            preUnlockedAudio.pause();
+            preUnlockedAudio.muted = false;
+          }).catch(() => {
+            preUnlockedAudio.muted = false;
+          });
+        } else {
+          preUnlockedAudio.muted = false;
+        }
+      }
+    } catch (_) {}
+
+    try {
+      await submitUserQuestionInner(rawText, preUnlockedAudio);
     } catch (_) {
       const lastBubble = messagesContainer.querySelector(".msg-row.ai:last-child .msg-bubble");
       if (lastBubble && lastBubble.querySelector(".thinking-state")) {
@@ -2538,7 +2622,7 @@
     }
   }
 
-  async function submitUserQuestionInner(rawText) {
+  async function submitUserQuestionInner(rawText, preUnlockedAudio = null) {
     const trimmed = rawText.trim();
     if (!trimmed || state.isTypingReply) return;
     state.isTypingReply = true;
@@ -2690,7 +2774,7 @@
 
     // Attach Audio Card (Shows loading visual -> plays once!)
     if (attachAudioTrack) {
-      bubble.appendChild(buildRomanticAudioCard(attachAudioTrack, true));
+      bubble.appendChild(buildRomanticAudioCard(attachAudioTrack, true, preUnlockedAudio));
     }
 
     if (attachTraits) {
