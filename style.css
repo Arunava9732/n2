@@ -1173,37 +1173,7 @@ img.real-emoji {
 }
 .send-frost-btn:hover { transform: scale(1.06); }
 
-/* Wrapped Pre-Questions Bar: zero cut-off pills on any screen width! */
-.pre-questions-bar {
-  max-width: 820px;
-  margin: 8px auto 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 6px;
-}
-
-.pre-q-pill {
-  padding: 5px 11px;
-  border-radius: 999px;
-  border: 1px solid var(--border-subtle);
-  background: #ffffff;
-  color: var(--ink-body);
-  font-family: inherit;
-  font-size: 0.74rem;
-  font-weight: 500;
-  cursor: pointer;
-  box-shadow: var(--shadow-xs);
-  transition: all 0.2s var(--ease-out);
-  white-space: nowrap;
-}
-.pre-q-pill:hover {
-  background: var(--grad-pill-soft);
-  border-color: var(--border-rose);
-  color: var(--rose-primary);
-  transform: translateY(-1px);
-}
+/* Clean Prompt Composer — Zero Pre-Questions Below Chat Input Bar */
 
 /* ==================== GENERIC PAGE SECTIONS ==================== */
 .page-scroll {
@@ -2139,13 +2109,10 @@ img.real-emoji {
   .toolbar-right-inline { width: 100%; justify-content: space-between; }
 
   /* Comfortable 34px+ touch targets */
-  .filter-pill, .followup-chip, .pre-q-pill, .mini-frost-btn { min-height: 34px; }
+  .filter-pill, .followup-chip, .mini-frost-btn { min-height: 34px; }
   .tactile-ribbon-slider { height: 14px; }
   .tactile-ribbon-slider::-webkit-slider-thumb { width: 28px; height: 28px; }
 
-  /* Chat: keep the composer area light so the conversation gets the space */
-  .pre-questions-bar { gap: 5px; margin-top: 6px; }
-  .pre-questions-bar .pre-q-pill:nth-child(n+5) { display: none; }
   .inline-followup-chips { gap: 5px; }
 
   /* Activity tabs scroll sideways with a soft fade hint instead of a hard cut */
@@ -2161,4 +2128,1508 @@ img.real-emoji {
   .cinema-header-controls { width: 100%; display: grid; grid-template-columns: 1fr 1.4fr 1fr; }
   .cinema-counter { display: none; }
   .cinema-title { font-size: 1.25rem; }
+}
+
+
+/* ==================== UPGRADED 50 UNIQUE ORIGAMI OPENINGS & 0%->100% PROGRESS ==================== */
+.exp-progress-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.orig-top-head {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+}
+.orig-pct-pill {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 999px;
+  background: var(--rose-tint);
+  color: var(--rose-primary);
+  border: 1px solid var(--border-rose);
+  flex-shrink: 0;
+}
+.orig-pct-pill.done-100 {
+  background: #dcfce7;
+  color: #166534;
+  border-color: #86efac;
+}
+.orig-svg-stage {
+  width: 100%;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.orig-svg-art {
+  width: 60px;
+  height: 60px;
+  overflow: visible;
+  filter: drop-shadow(0 4px 10px rgba(24, 24, 38, 0.08));
+  transition: transform 0.28s var(--ease-spring);
+}
+.orig-action-zone {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.orig-dual-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  width: 100%;
+}
+.orig-flap-btn {
+  padding: 6px 5px;
+  border-radius: 9px;
+  border: 1px solid var(--border-rose);
+  background: linear-gradient(135deg, #fff1f7, #f0f9ff);
+  color: var(--ink-deep);
+  font-family: inherit;
+  font-size: 0.67rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.25s var(--ease-out), opacity 0.25s ease, background 0.2s ease;
+}
+.orig-flap-btn:hover { background: var(--rose-tint); color: var(--rose-primary); }
+.orig-flap-btn.opened {
+  background: #dcfce7;
+  color: #166534;
+  border-color: #86efac;
+  transform: scale(0.92);
+}
+.orig-mitre-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  width: 100%;
+}
+.orig-seq-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+  width: 100%;
+}
+.orig-seq-btn {
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--border-subtle);
+  background: #ffffff;
+  font-family: inherit;
+  font-size: 0.66rem;
+  font-weight: 700;
+  color: var(--ink-deep);
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+.orig-seq-btn.done {
+  background: #dcfce7;
+  color: #166534;
+  border-color: #86efac;
+}
+.orig-scratch-canvas {
+  width: 100%;
+  max-width: 148px;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px dashed var(--border-rose);
+  cursor: crosshair;
+  touch-action: none;
+}
+.orig-hold-btn {
+  width: 100%;
+  padding: 7px 10px;
+  border-radius: 999px;
+  border: 1.5px solid var(--border-rose);
+  background: linear-gradient(135deg, #fff5f9, #ffffff);
+  color: var(--rose-primary);
+  font-family: inherit;
+  font-size: 0.69rem;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+  touch-action: none;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.orig-hold-btn:active { transform: scale(0.96); background: var(--rose-tint); }
+
+/* ==================== REBUILT GAME 4: CARNIVAL PHYSICS DATE WHEEL ==================== */
+.wheel-studio-grid {
+  display: grid;
+  grid-template-columns: minmax(270px, 340px) 1fr;
+  gap: 22px;
+  align-items: center;
+}
+.wheel-left-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+#dateWheelCanvas {
+  border-radius: 50%;
+  border: 5px solid #ffffff;
+  box-shadow: 0 14px 34px rgba(225, 29, 104, 0.16);
+  transition: none;
+  cursor: grab;
+  touch-action: none;
+}
+#dateWheelCanvas:active { cursor: grabbing; }
+.wheel-pointer {
+  position: absolute;
+  top: -12px;
+  z-index: 6;
+  font-size: 1.65rem;
+  color: var(--rose-primary);
+  filter: drop-shadow(0 3px 6px rgba(225, 29, 104, 0.35));
+  transform-origin: 50% 15%;
+  transition: transform 0.08s ease-out;
+}
+.wheel-pointer.ticking { transform: rotate(-22deg) scale(1.12); }
+.wheel-power-box {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: #f8fafd;
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.wheel-right-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+.wheel-deck-pills { display: flex; gap: 6px; flex-wrap: wrap; }
+.wheel-custom-add {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.wheel-custom-add input,
+.globe-wish-box input,
+.ticket-wish-row input,
+.capsule-input-row input {
+  flex: 1;
+  min-width: 160px;
+  padding: 9px 13px;
+  border-radius: 12px;
+  border: 1px solid var(--border-subtle);
+  background: #ffffff;
+  color: var(--ink-deep);
+  font-family: inherit;
+  font-size: 0.83rem;
+  outline: none;
+}
+.wheel-custom-add input:focus,
+.globe-wish-box input:focus,
+.ticket-wish-row input:focus,
+.capsule-input-row input:focus {
+  border-color: var(--rose-primary);
+  box-shadow: 0 0 0 3px rgba(225, 29, 104, 0.09);
+}
+.wheel-checklist-card {
+  padding: 15px 16px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #fff7fb 0%, #f2f9ff 100%);
+  border: 1px solid var(--border-rose);
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.wheel-picked-title {
+  font-family: var(--font-serif);
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: var(--ink-deep);
+  line-height: 1.4;
+}
+.wheel-prep-items { display: flex; flex-direction: column; gap: 6px; }
+.prep-check-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  font-size: 0.81rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.prep-check-row input[type="checkbox"] {
+  accent-color: var(--rose-primary);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* ==================== REBUILT GAME 5: ENCHANTED MINIATURE SNOW GLOBE ==================== */
+.globe-scene-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.globe-studio-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 22px;
+  align-items: center;
+}
+.globe-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+.globe-pedestal-plaque {
+  margin-top: -12px;
+  z-index: 3;
+  padding: 7px 18px;
+  border-radius: 10px 10px 16px 16px;
+  background: linear-gradient(135deg, #7c2d12 0%, #9a3412 50%, #451a03 100%);
+  border: 2px solid #fde68a;
+  color: #fef3c7;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-align: center;
+  box-shadow: 0 8px 18px rgba(69, 26, 3, 0.24);
+}
+.globe-controls-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+.globe-wind-box,
+.globe-wish-box {
+  padding: 12px 15px;
+  border-radius: 14px;
+  background: #f8fafd;
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+/* ==================== EXPANDED GAME 6: TRIVIA LIFELINES & EXPLANATIONS ==================== */
+.quiz-opt-btn.eliminated {
+  opacity: 0.32;
+  text-decoration: line-through;
+  pointer-events: none;
+}
+.quiz-explain-note {
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: var(--grad-pill-soft);
+  border: 1px solid var(--border-rose);
+  font-size: 0.84rem;
+  color: var(--ink-deep);
+  text-align: center;
+  font-weight: 500;
+}
+
+/* ==================== REBUILT GAME 8: 12-PETAL BOTANICAL ROSE & KEEPSAKE JAR ==================== */
+.rose-sanctuary-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 18px;
+  align-items: stretch;
+}
+.rose-left-garden {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 14px;
+  border-radius: 18px;
+  background: radial-gradient(circle at 50% 42%, #fff0f6 0%, #f4f9ff 100%);
+  border: 1px solid var(--border-subtle);
+}
+.rose-stage {
+  position: relative;
+  height: 276px;
+  display: grid;
+  place-items: center;
+}
+.rose-stem-svg {
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 96px;
+  height: 130px;
+  pointer-events: none;
+  z-index: 1;
+}
+.rose-center-core {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #fff1f2, #f43f5e 60%, #9f1239);
+  border: 2.5px solid #ffffff;
+  display: grid;
+  place-items: center;
+  font-size: 1.45rem;
+  z-index: 5;
+  box-shadow: 0 8px 20px rgba(225, 29, 104, 0.3);
+  transition: all 0.45s var(--ease-spring);
+}
+.rose-center-core.golden-eternal {
+  width: 78px;
+  height: 78px;
+  background: radial-gradient(circle at 30% 30%, #fef9c3, #facc15 55%, #ca8a04);
+  box-shadow: 0 0 28px rgba(250, 204, 21, 0.65);
+}
+.rose-petal-btn {
+  position: absolute;
+  width: 48px;
+  height: 78px;
+  border-radius: 50% 50% 46% 46% / 68% 68% 32% 32%;
+  border: 1.5px solid rgba(255, 255, 255, 0.94);
+  background: linear-gradient(180deg, #fda4af 0%, #f43f5e 52%, #be123c 100%);
+  color: #ffffff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 8px;
+  cursor: pointer;
+  z-index: 3;
+  transform-origin: center 76px;
+  box-shadow: 0 6px 14px rgba(190, 18, 60, 0.22);
+  transition: transform 0.55s var(--ease-out), opacity 0.5s ease, filter 0.3s ease;
+}
+.rose-petal-btn.inner-ring {
+  width: 40px;
+  height: 64px;
+  background: linear-gradient(180deg, #fecdd3 0%, #fb7185 55%, #e11d68 100%);
+  z-index: 4;
+  transform-origin: center 62px;
+}
+.rose-petal-btn.dew-sparkle::after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  right: 9px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffffff, #bae6fd);
+  box-shadow: 0 0 6px #ffffff;
+}
+.rose-keepsake-panel {
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid var(--border-rose);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+.keepsake-jar-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.rose-jar-petals-bar {
+  min-height: 36px;
+  padding: 6px 10px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #fff5f9, #eff8ff);
+  border: 1px dashed var(--border-rose);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.jar-petal-chip {
+  font-size: 0.72rem;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: #ffe4ef;
+  color: #be123c;
+  font-weight: 700;
+  animation: chipPopIn 0.24s var(--ease-out);
+}
+.rose-vows-scroll-list {
+  flex: 1;
+  max-height: 220px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding-right: 4px;
+}
+.vow-scroll-entry {
+  padding: 8px 11px;
+  border-radius: 11px;
+  background: #fcf8fa;
+  border: 1px solid rgba(225, 29, 104, 0.14);
+  font-size: 0.8rem;
+  line-height: 1.48;
+  color: var(--ink-deep);
+  cursor: pointer;
+  transition: background 0.18s ease;
+}
+.vow-scroll-entry:hover,
+.vow-scroll-entry.selected {
+  background: var(--rose-tint);
+  border-color: var(--rose-primary);
+}
+
+/* ==================== REBUILT GAME 9: 3D VIP DATE PASS WORKSHOP ==================== */
+.ticket-wish-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  max-width: 680px;
+  width: 100%;
+  margin: 0 auto;
+}
+.ticket-3d-perspective {
+  perspective: 1400px;
+  max-width: 680px;
+  width: 100%;
+  margin: 0 auto;
+}
+.vip-pass-3d-card {
+  position: relative;
+  width: 100%;
+  min-height: 218px;
+  transform-style: preserve-3d;
+  transition: transform 0.65s var(--ease-spring);
+}
+.vip-pass-3d-card.is-flipped {
+  transform: rotateY(180deg);
+}
+.vip-pass-face {
+  backface-visibility: hidden;
+  border-radius: 20px;
+  border: 1.5px solid rgba(225, 29, 104, 0.32);
+  background: linear-gradient(135deg, #fffafd 0%, #fef9c3 48%, #eff8ff 100%);
+  box-shadow: 0 14px 34px rgba(225, 29, 104, 0.12);
+  overflow: hidden;
+}
+.vip-pass-front {
+  display: grid;
+  grid-template-columns: 1fr 168px;
+  min-height: 218px;
+}
+.vip-pass-back {
+  position: absolute;
+  inset: 0;
+  transform: rotateY(180deg);
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #fff5f9 0%, #ffffff 50%, #eef7ff 100%);
+}
+.vip-pass-main {
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+  position: relative;
+}
+.vip-pass-stub {
+  border-left: 2px dashed rgba(225, 29, 104, 0.35);
+  background: rgba(255, 255, 255, 0.66);
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  transition: transform 0.45s var(--ease-out), opacity 0.4s ease;
+}
+.vip-pass-stub.detached {
+  transform: translateX(18px) rotate(5deg);
+  opacity: 0.45;
+}
+.vip-barcode {
+  width: 100%;
+  height: 26px;
+  border-radius: 4px;
+  background: repeating-linear-gradient(90deg, #181826 0 2px, transparent 2px 5px, #181826 5px 8px, transparent 8px 11px);
+  opacity: 0.72;
+}
+.vip-wax-stamp-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 11px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px dashed var(--ink-soft);
+  color: var(--ink-soft);
+}
+.vip-wax-stamp-badge.stamped {
+  background: linear-gradient(135deg, #fef08a, #f59e0b);
+  border: 1px solid #ffffff;
+  color: #78350f;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.32);
+}
+.ticket-interactive-bar {
+  max-width: 680px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.wax-emboss-btn {
+  padding: 11px 20px;
+  font-size: 0.82rem;
+}
+.stub-zip-box {
+  flex: 1;
+  min-width: 190px;
+  padding: 9px 14px;
+  border-radius: 14px;
+  background: #f8fafd;
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.ticket-wallet-strip {
+  max-width: 680px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 6px;
+}
+.wallet-mini-pass {
+  padding: 7px 12px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #fef9c3, #fff1f6);
+  border: 1px solid rgba(225, 29, 104, 0.25);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ink-deep);
+}
+
+/* ==================== INTERACTIVE SNOW & LOVED THINGS ACTIVITIES ==================== */
+.igloo-ambience-controls {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.igloo-aurora-slider-wrap {
+  flex: 1;
+  min-width: 170px;
+  padding: 6px 12px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--rose-primary);
+}
+.finland-aurora-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(160deg, rgba(16, 185, 129, 0.36) 0%, rgba(236, 72, 153, 0.28) 48%, transparent 80%);
+  mix-blend-mode: screen;
+  transition: opacity 0.3s ease;
+}
+.finland-fire-glow {
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 45%;
+  pointer-events: none;
+  background: radial-gradient(circle at 50% 100%, rgba(251, 146, 60, 0.42), transparent 72%);
+  transition: opacity 0.35s ease;
+}
+.suitcase-activity-box {
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1.5px dashed rgba(14, 165, 233, 0.28);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.suitcase-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.suitcase-items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+  gap: 9px;
+}
+.suitcase-item-btn {
+  padding: 10px 12px;
+  border-radius: 13px;
+  border: 1px solid var(--border-subtle);
+  background: #ffffff;
+  color: var(--ink-deep);
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s var(--ease-out);
+}
+.suitcase-item-btn:hover { border-color: var(--border-rose); transform: translateY(-1px); }
+.suitcase-item-btn.packed {
+  background: linear-gradient(135deg, #dcfce7, #f0fdf4);
+  border-color: #86efac;
+  color: #166534;
+}
+.craving-kitchen-shell {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 22px;
+}
+.kitchen-style-bar {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+
+/* ==================== INTERACTIVE TIMELINE PASSPORT & CHAPTER #7 CAPSULE ==================== */
+.timeline-passport-card,
+.timeline-capsule-card {
+  max-width: 860px;
+  margin: 0 auto 22px;
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.timeline-capsule-card {
+  margin-top: 22px;
+  margin-bottom: 0;
+  background: linear-gradient(135deg, #fff7fb 0%, #ffffff 50%, #f0f8ff 100%);
+  border-color: var(--border-rose);
+}
+.passport-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.tl-mini-matcher {
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: #f8fafd;
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.tl-match-opts { display: flex; gap: 6px; flex-wrap: wrap; }
+.timeline-item.is-stamped {
+  border-color: rgba(245, 158, 11, 0.48);
+  background: linear-gradient(145deg, #ffffff 0%, #fffdf4 100%);
+}
+.timeline-item.is-stamped .timeline-dot {
+  background: #f59e0b;
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.65);
+}
+.tl-card-actions {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.tl-secret-margin-note {
+  margin-top: 10px;
+  padding: 9px 13px;
+  border-radius: 11px;
+  background: var(--grad-pill-soft);
+  border-left: 3px solid var(--rose-primary);
+  font-family: var(--font-hand);
+  font-size: 1.18rem;
+  color: var(--ink-deep);
+}
+.capsule-preset-pills { display: flex; gap: 6px; flex-wrap: wrap; }
+.capsule-input-row { display: flex; gap: 8px; flex-wrap: wrap; }
+
+@media (max-width: 860px) {
+  .wheel-studio-grid,
+  .globe-studio-grid,
+  .rose-sanctuary-grid {
+    grid-template-columns: 1fr;
+  }
+  .vip-pass-front {
+    grid-template-columns: 1fr;
+  }
+  .vip-pass-stub {
+    border-left: none;
+    border-top: 2px dashed rgba(225, 29, 104, 0.35);
+    flex-direction: row;
+    gap: 10px;
+  }
+  .vip-barcode { width: 90px; }
+}
+
+
+/* ==================== VIEW 9: INTERACTIVE PURR & CAT HAVEN + SOUL TONE BADGE ==================== */
+#view-cathaven .section-hero {
+  padding: 14px 20px;
+  margin-bottom: 12px;
+}
+#view-cathaven .section-title {
+  font-size: clamp(1.45rem, 2.4vw, 1.9rem);
+  margin: 2px 0 4px;
+}
+#view-cathaven .section-desc {
+  font-size: 0.84rem;
+  margin-bottom: 8px;
+}
+#view-cathaven .arcade-trophy-banner {
+  margin-top: 6px;
+  padding: 8px 14px;
+}
+.cat-haven-card {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.cat-toolbar-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.cat-action-btns {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+.cat-canvas-wrap {
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1.5px solid rgba(225, 29, 104, 0.2);
+  box-shadow: inset 0 2px 10px rgba(24, 24, 38, 0.04);
+  background: linear-gradient(180deg, #fff7fb 0%, #fef3c7 100%);
+}
+.cat-haven-canvas {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 840 / 450;
+  display: block;
+  cursor: pointer;
+  touch-action: none;
+}
+.cat-mode-switch-bar {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+.cat-mode-tab {
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1.5px solid var(--border-subtle);
+  background: #f8fafd;
+  color: var(--ink-body);
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s var(--ease-out);
+  text-align: center;
+}
+.cat-mode-tab:hover {
+  border-color: var(--border-rose);
+  color: var(--rose-primary);
+}
+.cat-mode-tab.active {
+  background: linear-gradient(135deg, #fff0f6 0%, #eff8ff 100%);
+  border-color: var(--rose-primary);
+  color: var(--rose-primary);
+  box-shadow: 0 6px 16px rgba(225, 29, 104, 0.12);
+}
+.cat-quest-strip {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-wrap: wrap;
+  padding: 9px 12px;
+  border-radius: 13px;
+  background: linear-gradient(135deg, #fffafd 0%, #f4f9ff 100%);
+  border: 1px dashed var(--border-rose);
+}
+.cat-quest-pill {
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  color: var(--ink-soft);
+  transition: all 0.22s ease;
+}
+.cat-quest-pill.done {
+  background: linear-gradient(135deg, #dcfce7, #f0fdf4);
+  border-color: #86efac;
+  color: #166534;
+  font-weight: 700;
+}
+.cat-minigame-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #fff1f6 0%, #eff8ff 100%);
+  border: 1px solid var(--border-rose);
+}
+
+/* ==================== FINLAND SNOWMAN ANTHEM & HER FAVORITE SONG CARDS ==================== */
+.finland-music-duo-grid {
+  max-width: 1100px;
+  margin: 0 auto 18px;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 14px;
+  align-items: stretch;
+}
+.finland-anthem-banner,
+.fav-song-showcase-card {
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+}
+.anthem-banner-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.finland-anthem-banner .chat-audio-card,
+.fav-song-showcase-card .chat-audio-card {
+  margin-top: 2px;
+}
+
+/* ==================== CLASSIFIED ARCHIVE VIEWER (RENDERED ONLY ON SECRET TRIGGER) ==================== */
+[hidden] {
+  display: none !important;
+}
+.vault-dossier-card {
+  margin-top: 14px;
+  border-radius: 20px;
+  border: 1.5px solid rgba(14, 165, 233, 0.35);
+  background: linear-gradient(155deg, #0b1120 0%, #111c33 55%, #1a102e 100%);
+  color: #f1f5f9;
+  box-shadow: 0 18px 42px rgba(9, 13, 28, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: hidden;
+  max-width: 100%;
+}
+.vault-console-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(56, 189, 248, 0.24);
+}
+.vault-traffic-dots {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.vault-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.vault-dot.red { background: #fb7185; box-shadow: 0 0 6px rgba(251, 113, 133, 0.7); }
+.vault-dot.amber { background: #facc15; box-shadow: 0 0 6px rgba(250, 204, 21, 0.7); }
+.vault-dot.emerald { background: #34d399; box-shadow: 0 0 6px rgba(52, 211, 153, 0.7); }
+.vault-console-path {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.71rem;
+  color: #38bdf8;
+  letter-spacing: 0.03em;
+  overflow-wrap: anywhere;
+}
+.vault-header-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+}
+.vault-kpi-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+.vault-kpi-box {
+  padding: 8px 10px;
+  border-radius: 12px;
+  background: rgba(30, 41, 59, 0.78);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.vault-kpi-lbl {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #94a3b8;
+}
+.vault-kpi-val {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #f8fafc;
+}
+.vault-kpi-box.healed {
+  background: linear-gradient(135deg, rgba(225, 29, 104, 0.24), rgba(124, 58, 237, 0.24));
+  border-color: rgba(244, 63, 122, 0.5);
+}
+.vault-kpi-box.healed .vault-kpi-val {
+  color: #fda4af;
+}
+.vault-tabs-bar {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+.vault-tab-btn {
+  padding: 7px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  background: rgba(15, 23, 42, 0.82);
+  color: #cbd5e1;
+  font-family: inherit;
+  font-size: 0.73rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  text-align: center;
+}
+.vault-tab-btn:hover {
+  border-color: #38bdf8;
+  color: #ffffff;
+}
+.vault-tab-btn.active {
+  background: linear-gradient(135deg, #e11d68 0%, #7c3aed 100%);
+  border-color: #fda4af;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(225, 29, 104, 0.35);
+}
+.vault-pane-body {
+  max-height: 430px;
+  overflow-y: auto;
+  padding-right: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.vault-pane-body[hidden] {
+  display: none !important;
+}
+.vault-transform-duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.vault-box-before {
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(15, 23, 42, 0.88);
+  border: 1px solid rgba(56, 189, 248, 0.32);
+  font-size: 0.79rem;
+  color: #cbd5e1;
+  line-height: 1.54;
+}
+.vault-box-after {
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(225, 29, 104, 0.22) 0%, rgba(250, 204, 21, 0.14) 100%);
+  border: 1.5px solid rgba(244, 63, 122, 0.5);
+  font-size: 0.79rem;
+  color: #fff1f2;
+  line-height: 1.54;
+}
+.vault-terminal-frame {
+  border-radius: 14px;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  background: #070b14;
+  overflow: hidden;
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+.vault-terminal-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 7px 12px;
+  background: rgba(30, 41, 59, 0.9);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: #7dd3fc;
+}
+.vault-term-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.vault-term-btn {
+  padding: 3px 9px;
+  border-radius: 7px;
+  border: 1px solid rgba(125, 211, 252, 0.35);
+  background: rgba(15, 23, 42, 0.9);
+  color: #e0f2fe;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.vault-term-btn:hover {
+  background: rgba(14, 165, 233, 0.25);
+  border-color: #38bdf8;
+}
+.vault-code-pre {
+  margin: 0;
+  padding: 12px 14px;
+  background: transparent;
+  color: #a7f3d0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  line-height: 1.55;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-x: auto;
+  max-height: 310px;
+}
+.vault-code-pre.preserve-lines {
+  white-space: pre;
+  word-break: normal;
+}
+.vault-phase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 8px;
+}
+.vault-phase-item {
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  font-size: 0.76rem;
+  color: #e2e8f0;
+  line-height: 1.48;
+}
+.vault-trait-row {
+  padding: 9px 12px;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 0.77rem;
+  color: #f1f5f9;
+}
+.vault-bar-track {
+  width: 100%;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(51, 65, 85, 0.9);
+  overflow: hidden;
+  position: relative;
+}
+.vault-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #38bdf8, #e11d68, #facc15);
+}
+@media (max-width: 780px) {
+  .finland-music-duo-grid,
+  .vault-transform-duo,
+  .cat-mode-switch-bar {
+    grid-template-columns: 1fr;
+  }
+  .vault-kpi-strip,
+  .vault-tabs-bar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ==================== SNOWMAN INTERACTIVE PLAYGROUND (SNOW & LOVED THINGS) ==================== */
+.snowman-play-shell {
+  max-width: 1100px;
+  margin: 0 auto 24px;
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: linear-gradient(145deg, #f0f9ff 0%, #ffffff 52%, #fff5f9 100%);
+  border: 1.5px solid rgba(14, 165, 233, 0.24);
+}
+.snowman-head-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.snowman-head-badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.snowman-controls-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.snowman-canvas-wrap {
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 2px solid #ffffff;
+  box-shadow: 0 16px 38px rgba(15, 23, 42, 0.14);
+  background: linear-gradient(180deg, #071329 0%, #dbeafe 68%, #ffffff 100%);
+}
+.snowman-play-canvas {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 840 / 420;
+  display: block;
+  cursor: pointer;
+  touch-action: none;
+}
+.snowman-cinema-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  padding: 7px 12px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.92), rgba(30, 58, 95, 0.9));
+  color: #f8fafc;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.12);
+}
+.cinema-reel-lbl {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #bae6fd;
+  margin-right: 4px;
+}
+.scene-dot-btn {
+  padding: 4px 11px;
+  border-radius: 999px;
+  border: 1px solid rgba(186, 230, 253, 0.35);
+  background: rgba(255, 255, 255, 0.1);
+  color: #e0f2fe;
+  font-family: var(--font-serif);
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.scene-dot-btn:hover {
+  background: rgba(244, 63, 122, 0.3);
+  border-color: #fda4af;
+  color: #ffffff;
+}
+.scene-dot-btn.active {
+  background: linear-gradient(135deg, #e11d68, #7c3aed);
+  border-color: #fda4af;
+  color: #ffffff;
+  box-shadow: 0 3px 10px rgba(225, 29, 104, 0.4);
+}
+.snowman-action-dock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* ==================== CAT WELCOME BANNER & COUPLE CATS STYLING ==================== */
+.cat-welcome-banner {
+  padding: 9px 14px;
+  border-radius: 13px;
+  background: linear-gradient(135deg, #fff0f6 0%, #fef9c3 55%, #eff8ff 100%);
+  border: 1px solid rgba(225, 29, 104, 0.28);
+  color: var(--ink-deep);
+  font-size: 0.81rem;
+  line-height: 1.45;
+  text-align: center;
+  transition: transform 0.35s var(--ease-spring), box-shadow 0.35s ease;
+}
+.cat-welcome-banner.greeting-pop {
+  transform: scale(1.015);
+  box-shadow: 0 8px 22px rgba(225, 29, 104, 0.16);
+}
+.couple-kiss-pill-btn {
+  box-shadow: 0 6px 18px rgba(225, 29, 104, 0.28);
+}
+
+/* ==================== GLOBAL TYPOGRAPHY & PC / TABLET / MOBILE RESPONSIVENESS POLISH ==================== */
+p, li, dd, blockquote, .timeline-story, .finland-spot-detail, .food-card p {
+  text-wrap: pretty;
+  overflow-wrap: anywhere;
+}
+h1, h2, h3, h4, .section-title, .subsection-title, .timeline-title, .cinema-title {
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+.finland-copy-col,
+.finland-visual-col,
+.finland-anthem-banner,
+.fav-song-showcase-card,
+.cat-insp-left > div,
+.audio-meta-col,
+.vault-dossier-card {
+  min-width: 0;
+}
+.audio-title {
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+.cat-insp-left > div strong,
+.cat-insp-left > div p {
+  overflow-wrap: anywhere;
+  line-height: 1.38;
+}
+
+@media (max-width: 960px) {
+  .snowman-controls-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .cat-toolbar-top {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 680px) {
+  /* Prevent long pill/CTA buttons from overflowing narrow 320px-390px phone screens */
+  .primary-pill-btn,
+  .ghost-pill-btn,
+  .large-cta-btn,
+  .box-front-emblem,
+  .score-pill,
+  .followup-chip,
+  .filter-pill,
+  .cat-mode-tab {
+    white-space: normal;
+    text-align: center;
+    line-height: 1.28;
+    max-width: 100%;
+  }
+  .snowman-play-shell,
+  .craving-kitchen-shell,
+  .timeline-passport-card,
+  .timeline-capsule-card {
+    padding: 15px 12px;
+  }
+  .snowman-action-dock {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+  .snowman-action-dock button {
+    width: 100%;
+    padding: 9px 10px;
+    font-size: 0.77rem;
+  }
+  .cat-action-btns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+  .cat-action-btns .couple-kiss-pill-btn {
+    grid-column: 1 / -1;
+  }
+  #catToolTabs,
+  #snowmanHatTabs,
+  #snowmanScarfTabs {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  #catToolTabs .filter-pill,
+  #snowmanHatTabs .filter-pill,
+  #snowmanScarfTabs .filter-pill {
+    flex: 1 1 calc(50% - 6px);
+    font-size: 0.73rem;
+    padding: 7px 8px;
+  }
+  .cat-quest-strip {
+    padding: 8px 10px;
+    gap: 5px;
+  }
+  .cat-quest-pill {
+    font-size: 0.69rem;
+    padding: 3px 8px;
+  }
+  .trophy-stat {
+    padding: 6px;
+    text-align: center;
+  }
+  .trophy-lbl {
+    font-size: 0.65rem;
+    line-height: 1.2;
+  }
+  .trophy-stat strong {
+    font-size: 0.8rem;
+  }
+  .vault-dossier-card {
+    padding: 12px 10px;
+  }
+  .vault-pane-body {
+    max-height: 340px;
+  }
+  .vault-code-pre {
+    font-size: 0.68rem;
+    padding: 9px 10px;
+  }
+}
+
+@media (max-width: 380px) {
+  .section-title { font-size: 1.35rem; }
+  .msg-bubble { padding: 11px 12px; font-size: 0.86rem; }
+  .snowman-action-dock,
+  .cat-action-btns {
+    grid-template-columns: 1fr;
+  }
+}
+.cat-inspector-bar {
+  padding: 12px 15px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #fff5f9 0%, #f0f9ff 100%);
+  border: 1px solid var(--border-rose);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.cat-insp-left {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-width: 0;
+}
+.cat-insp-orb {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: #ffffff;
+  border: 1px solid var(--border-rose);
+  display: grid;
+  place-items: center;
+  font-size: 1.45rem;
+  flex-shrink: 0;
+}
+.cat-insp-right {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+.cat-insp-right input {
+  width: 165px;
+  padding: 8px 12px;
+  border-radius: 11px;
+  border: 1px solid var(--border-subtle);
+  background: #ffffff;
+  color: var(--ink-deep);
+  font-family: inherit;
+  font-size: 0.81rem;
+  outline: none;
+}
+.cat-insp-right input:focus {
+  border-color: var(--rose-primary);
+}
+.tone-mode-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--rose-tint);
+  border: 1px solid var(--border-rose);
+  color: var(--rose-primary);
+  font-size: 0.67rem;
+  font-weight: 700;
+  margin-left: 6px;
+}
+@media (max-width: 680px) {
+  .cat-haven-card { padding: 12px; }
+  .cat-insp-right { width: 100%; }
+  .cat-insp-right input { flex: 1; min-width: 120px; }
 }
